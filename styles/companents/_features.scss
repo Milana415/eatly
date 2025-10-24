@@ -1,0 +1,36 @@
+.features {
+    background: $puple-dark url(../../images/features-bg-vector.png) no-repeat center / cover;
+    padding: 49px 0;
+    margin: 0 0 103.5px 0;
+    &__list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 66px;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        gap: 11px;
+        text-align: center;
+        max-width: 202px;
+        h3 {
+            color: $white;
+            font-family: Poppins;
+            font-size: 42px;
+        }
+
+        p {
+            color: $puple-light;
+            font-size: 14px;
+            line-height: 21.6px;
+        }
+    }
+
+    &__line {
+        height: 123px;
+        width: 1px;
+        background-color: $gray-medium;
+    }
+}
