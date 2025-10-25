@@ -7,7 +7,6 @@ tmp/
 cache/
 *.log
 *.tmp
-dist/
 build/
 out/
 AppData/
