@@ -1,0 +1,19 @@
+.header {
+    &__content {
+        @include flex(center, center, null, 103.12);
+    }
+
+    &__nav {
+        @include flex(center, center, null, 425.6);
+    }
+
+    &__menu {
+        ul {
+            @include flex(center, center, null, 53.49);
+        }
+    }
+
+    &__buttons {
+        @include flex(center, center, null, 8.91);
+    }
+}

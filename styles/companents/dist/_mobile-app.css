@@ -1,0 +1,8 @@
+.mobile-app__contsnt {
+  display: flex;
+  gap: 220px;
+  align-items: center;
+}
+.mobile-app__benefits h2 {
+  font-family: Poppins;
+}

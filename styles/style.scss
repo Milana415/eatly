@@ -32,12 +32,23 @@ body {
     margin: 0 auto;
 }
 
-li {
-    list-style: none;
+.logo {
+    @include flex(center, null, null, 11);
+    
+    p {
+        @include font(Poppins, 21.18, 600, null, $puple-medium);
+    }
 }
 
-a {
-    text-decoration: none;
+.button {
+    background: $puple-medium;
+    color: $white;
+    padding: 18px 26px;
+    @include font(Poppins, null, 500, null, null);
+    @include flex(center, null, row, 0);
+    border: 0px;
 }
 
+@import 'companents/header';
 @import 'companents/features';
+@import 'companents/mobile-app';

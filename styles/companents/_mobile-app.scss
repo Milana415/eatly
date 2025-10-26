@@ -1,0 +1,30 @@
+.mobile-app {
+    &__content {
+        @include flex(null, null, null, 219.54);
+
+        img {
+            margin-left: 111px;
+        }
+    }
+
+    &__text {
+        max-width: 500px;
+
+        h2 {
+            @include font(Poppins, $size-h2, 700, 58.2, null);
+
+            span {
+                color: $puple-medium;
+            }
+        }
+
+        ul {
+            margin-bottom: 66px;
+
+            li {
+                @include font(Inter, 20.33, 400, 30.05, $gray-light);
+                margin-bottom: 28px;
+            }
+        }
+    }
+}
