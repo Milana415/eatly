@@ -1,0 +1,20 @@
+.cards {
+    @include flex(center, center, null, 30.7);
+
+    .card {
+        img {
+            margin-bottom: 10.93px;
+        }
+
+        &__text {
+            em {
+                @include font(Poppins, 12.78, 400, 100%, null);
+            }
+            
+            h4 {
+                @include font(Poppins, 25.79, 600, 41.9, $black);
+                margin-bottom: 1.75px;
+            }
+        }
+    }
+}

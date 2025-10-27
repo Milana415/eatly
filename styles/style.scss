@@ -40,15 +40,30 @@ body {
     }
 }
 
+.span {
+    color: $puple-medium;
+}
+
 .button {
-    background: $puple-medium;
-    color: $white;
     padding: 18px 26px;
     @include font(Poppins, null, 500, null, null);
     @include flex(center, null, row, 0);
     border: 0px;
+
+    &--primary {
+        background: $puple-medium;
+        color: $white;
+    }
+
+    &--secondary{
+        background: $bg-light;
+        color: $gray-medium;
+
+    }
 }
 
 @import 'companents/header';
 @import 'companents/features';
 @import 'companents/mobile-app';
+@import 'companents/restaurants';
+@import 'companents/footer';

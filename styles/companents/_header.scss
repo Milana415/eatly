@@ -1,6 +1,8 @@
 .header {
     &__content {
         @include flex(center, center, null, 103.12);
+        padding: 48px 0 24.4px 0;
+        border-bottom: solid 1px $gray-light;
     }
 
     &__nav {
@@ -10,10 +12,24 @@
     &__menu {
         ul {
             @include flex(center, center, null, 53.49);
+            @include font(Inter, 17.83, 500, 26.74, null);
+            
+            li {
+                @include li();
+                a {
+                    @include a();
+                    color: rgba(96, 96, 96, 1)
+                }
+            }
         }
     }
 
     &__buttons {
         @include flex(center, center, null, 8.91);
+
+        .button {
+            @include font(Inter, 17.83, 700, 26.74, null);
+            border-radius: 17.83px;
+        }
     }
 }

@@ -1,0 +1,36 @@
+.footer {
+    background: $bg-footer;
+
+    &__nav {
+        padding: 96px 0 29px;
+        border-bottom: solid 1px $gray-light;
+        @include flex(center, space-between, null, null);
+    }
+
+    &__menu {
+        @include flex(center, center, null, 70);
+        @include font(Inter, 17.83, 500, 26.74, $gray-medium);
+
+        li {
+            @include li();
+
+            a {
+                @include a();
+                color: rgba(96, 96, 96, 1)
+            }
+        }
+    }
+
+    &__info {
+        padding: 57px 0 81px;
+        @include flex(center, space-between, null, null);
+
+        p {
+            @include font(Inter, 17, 500, 25, $gray-medium);
+        }
+    }
+
+    &__social-media {
+        @include flex(center, center, null, 53.8);
+    }
+}

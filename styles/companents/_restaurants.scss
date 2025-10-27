@@ -1,0 +1,7 @@
+.restaurants{
+    &__content {
+        padding: 100px 0 120px;
+        @include h3;
+        @import 'cards';
+    }
+}

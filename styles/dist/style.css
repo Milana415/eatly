@@ -38,9 +38,11 @@ body {
   color: #6c5fbc;
 }
 
+.span {
+  color: #6c5fbc;
+}
+
 .button {
-  background: #6c5fbc;
-  color: white;
   padding: 18px 26px;
   font-family: Poppins;
   font-size: px;
@@ -52,12 +54,22 @@ body {
   gap: 0px;
   border: 0px;
 }
+.button--primary {
+  background: #6c5fbc;
+  color: white;
+}
+.button--secondary {
+  background: #F9F9F9;
+  color: #676767;
+}
 
 .header__content {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 103.12px;
+  padding: 48px 0 24.4px 0;
+  border-bottom: solid 1px #cbcbcb;
 }
 .header__nav {
   display: flex;
@@ -70,12 +82,30 @@ body {
   align-items: center;
   justify-content: center;
   gap: 53.49px;
+  font-family: Inter;
+  font-size: 17.83px;
+  font-weight: 500;
+  line-height: 26.74px;
+}
+.header__menu ul li {
+  list-style: none;
+}
+.header__menu ul li a {
+  text-decoration: none;
+  color: #606060;
 }
 .header__buttons {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8.91px;
+}
+.header__buttons .button {
+  font-family: Inter;
+  font-size: 17.83px;
+  font-weight: 700;
+  line-height: 26.74px;
+  border-radius: 17.83px;
 }
 
 .features {
@@ -115,10 +145,21 @@ body {
 
 .mobile-app__content {
   display: flex;
-  gap: 219.54px;
+  gap: 287px;
+  padding: 103.4px 0 98px 0;
+  border-bottom: solid 1px #cbcbcb;
 }
-.mobile-app__content img {
+.mobile-app__img {
   margin-left: 111px;
+  position: relative;
+}
+.mobile-app__img img {
+  width: 304px;
+}
+.mobile-app__img::after {
+  content: url("../../images/mobile-app-vector.png");
+  position: absolute;
+  left: calc(304px + 15px);
 }
 .mobile-app__text {
   max-width: 500px;
@@ -128,9 +169,7 @@ body {
   font-size: 50.92px;
   font-weight: 700;
   line-height: 58.2px;
-}
-.mobile-app__text h2 span {
-  color: #6c5fbc;
+  margin-bottom: 63px;
 }
 .mobile-app__text ul {
   margin-bottom: 66px;
@@ -142,4 +181,99 @@ body {
   line-height: 30.05px;
   color: #676767;
   margin-bottom: 28px;
+}
+.mobile-app__text button {
+  border-radius: 14.68px;
+  font-size: 18px;
+  gap: 14.91px;
+  position: relative;
+}
+.mobile-app__text button::after {
+  content: url("../../images/mobile-app-vector2.png");
+  position: absolute;
+  top: 50px;
+  left: 170px;
+}
+
+.restaurants__content {
+  padding: 100px 0 120px;
+  font-family: Poppins-SemiBold;
+  font-size: 45px;
+  font-weight: 500;
+  line-height: 25.56px;
+  color: #c5c5c515;
+  text-align: center;
+}
+.restaurants__content .cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30.7px;
+}
+.restaurants__content .cards .card img {
+  margin-bottom: 10.93px;
+}
+.restaurants__content .cards .card__text em {
+  font-family: Poppins;
+  font-size: 12.78px;
+  font-weight: 400;
+  line-height: 100%px;
+}
+.restaurants__content .cards .card__text h4 {
+  font-family: Poppins;
+  font-size: 25.79px;
+  font-weight: 600;
+  line-height: 41.9px;
+  color: #323142;
+  margin-bottom: 1.75px;
+}
+
+.footer {
+  background: #eaeaea;
+}
+.footer__nav {
+  padding: 96px 0 29px;
+  border-bottom: solid 1px #cbcbcb;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: px;
+}
+.footer__menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
+  font-family: Inter;
+  font-size: 17.83px;
+  font-weight: 500;
+  line-height: 26.74px;
+  color: #676767;
+}
+.footer__menu li {
+  list-style: none;
+}
+.footer__menu li a {
+  text-decoration: none;
+  color: #606060;
+}
+.footer__info {
+  padding: 57px 0 81px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: px;
+}
+.footer__info p {
+  font-family: Inter;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 25px;
+  color: #676767;
+}
+.footer__social-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 53.8px;
 }

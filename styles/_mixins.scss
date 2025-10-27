@@ -21,3 +21,8 @@
     line-height: $height + px;
     color: $color;
 }
+
+@mixin h3() {
+    @include font(Poppins-SemiBold, 45, 500, 25.56, $gray-dark);
+    text-align: center;
+}
