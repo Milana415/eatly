@@ -1,7 +1,7 @@
 .mobile-app {
     &__content {
         @include flex(null, null, null, 287);
-        padding: 103.4px 0 98px 0;    
+        padding: 104px 0 98px 0;
         border-bottom: solid 1px $gray-light;
     }
 
@@ -24,7 +24,7 @@
         max-width: 500px;
 
         h2 {
-            @include font(Poppins, $size-h2, 700, 58.2, null);
+            @include font(Poppins, $size-h2, 700, 58, null);
             margin-bottom: 63px;
         }
 
@@ -32,15 +32,14 @@
             margin-bottom: 66px;
 
             li {
-                @include font(Inter, 20.33, 400, 30.05, $gray-medium);
+                @include font(Inter, 20, 400, 30, $gray-medium);
                 margin-bottom: 28px;
             }
         }
 
         button {
-            border-radius: 14.68px;
             font-size: 18px;
-            gap: 14.91px;
+            gap: 15px;
             position: relative;
 
             &::after {

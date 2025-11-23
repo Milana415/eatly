@@ -1,0 +1,47 @@
+.subscribe {
+    &__content {
+        background: $puple-medium url("../../images/subscribe-bg.png") no-repeat center/cover;
+        border-radius: 30px;
+        position: relative;
+        padding: 37px 72px 61px 66px;
+        margin-bottom: 216px;
+
+        h2 {
+            @include font (Poppins, 70, 800, null, rgba(222, 220, 239, 1));
+        }
+
+        img {
+            position: absolute;
+            right: 72px;
+            top: 64px;
+        }
+    }
+
+    &__form {
+        @include flex (center, space-between, null, 0);
+        width: 440px;
+        padding: 7.3px 6.4px 7.3px 22px;
+        border-radius: 14px;
+        background-color: rgba(222, 220, 239, 1);
+        box-shadow: 0px 7.25px 45px 0px rgba(0, 0, 0, 0.1);
+
+        input {
+            border: 0;
+            width: 100%;
+            outline: none;
+            background-color: rgba(222, 220, 239, 0);
+
+            &::placeholder {
+                @include font (Poppins, 16, 400, null, rgba(135, 135, 135, 1));
+            }
+        }
+
+        .button {
+            text-transform: uppercase;
+            @include font (Poppins, 15, 500, null, rgba(222, 220, 239, 1));
+            letter-spacing: 3%;
+            text-transform: uppercase;
+
+        }
+    }
+}

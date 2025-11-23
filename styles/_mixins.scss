@@ -6,7 +6,7 @@
     list-style: none;
 }
 
-@mixin flex($align: center, $justify: center, $direction:column, $gap: 0) {
+@mixin flex($align: center, $justify: center, $direction: column, $gap: 0) {
     display: flex;
     align-items: $align;
     justify-content: $justify;
@@ -22,7 +22,16 @@
     color: $color;
 }
 
+@mixin size($w, $h){
+    width: $w + px;
+    height: $h + px;
+}
+
+@mixin main-font() {
+    @include font(Inter, 18, 500, 27, $gray-medium);
+}
+
 @mixin h3() {
-    @include font(Poppins-SemiBold, 45, 500, 25.56, $gray-dark);
+    @include font(Poppins-SemiBold, 45, 500, 26, $gray-dark);
     text-align: center;
 }

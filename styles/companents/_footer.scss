@@ -9,7 +9,7 @@
 
     &__menu {
         @include flex(center, center, null, 70);
-        @include font(Inter, 17.83, 500, 26.74, $gray-medium);
+        @include main-font;
 
         li {
             @include li();
@@ -31,6 +31,6 @@
     }
 
     &__social-media {
-        @include flex(center, center, null, 53.8);
+        @include flex(center, center, null, 54);
     }
 }

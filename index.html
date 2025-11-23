@@ -27,7 +27,7 @@
                 </div>
                 <div class="header__buttons">
                     <button class="button button--secondary">Login</button>
-                    <button class="button button--primary">Sign up</button>
+                    <button class="button button--primary">Sign Up</button>
                 </div>
             </div>
         </div>
@@ -41,7 +41,8 @@
             </div>
 
             <h1 class="main__title">Enjoy Foods All <br>Over The <span class="span">World</span></h1>
-            <p>EatLy help you set saving goals, earn cash back offers, Go to disclaimer for more details and get
+            <p class="main__info">EatLy help you set saving goals, earn cash back offers, Go to disclaimer for more
+                details and get
                 paychecks up to two days early. Get a <span class="span">$20 bonus.</span></p>
 
             <div class="main__buttons">
@@ -51,15 +52,15 @@
 
             <div class="main__trust">
                 <div class="main__trust-logo">
-                    <img src="images/main_trustpilot.png" alt="Logo">
+                    <img src="images/trustpilot.svg" alt="Logo">
                 </div>
                 <div class="main__trust-rating">
                     <div class="main__stars">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
+                        <img src="images/star.svg" alt="Star">
+                        <img src="images/star.svg" alt="Star">
+                        <img src="images/star.svg" alt="Star">
+                        <img src="images/star.svg" alt="Star">
+                        <img src="images/star.svg" alt="Star">
                     </div>
                     <p>4900+</p>
                 </div>
@@ -100,7 +101,7 @@
                     </li>
                     <li>These foods promote overall wellness by support healthy digestion and boosting immunity</li>
                 </ul>
-                <button class="button button--primary">Download 
+                <button class="button button--primary">Download
                     <img src="images/download-app_mobile-screen-arrow.png" alt="">
                 </button>
             </div>
@@ -109,57 +110,317 @@
 
     <section class="restaurants">
         <div class="container restaurants__content">
-            <h3>Our Top Restaurants</h3>
+            <h3>Our Top <span class="span">Restaurants</span></h3>
             <div class="restaurants__items cards">
                 <div class="restaurants__item card">
-                    <img src="" alt="The Chicken King">
+                    <img class="card__img" src="images/restaurants__item-The Chicken King.png" alt="The Chicken King">
                     <div class="card__text">
-                        <em>Healthy</em>
+                        <em class="card__em card__em--primary">Healthy</em>
                         <h4>The Chicken King</h4>
                         <div class="card__rating">
-                            <p>24min •</p>
-                            <img src="" alt="star">
-                            <p>4.8</p>
+                            <div class="card__rating-content">
+                                <p>24min •</p>
+                                <img src="images/star--primary.png" alt="star">
+                                <p>4.8</p>
+                            </div>
+                            <button class="card__favourites">
+                                <img src="images/favourites.svg" alt="favourites">
+                            </button>
                         </div>
                     </div>
-                    <button class="button--favourites">
-                        <img src="" alt="favourites">
-                    </button>
                 </div>
                 <div class="restaurants__item card">
-                    <img src="" alt="The Burger King">
-                    <div class="card-text">
-                        <em>Trending</em>
+                    <img class="card__img" src="images/restaurants__item-The Burger King.png" alt="The Burger King">
+                    <div class="card__text">
+                        <em class="card__em card__em--red">Trending</em>
                         <h4>The Burger King</h4>
-                        <div class="card-rating">
-                            <p>24min •</p>
-                            <img src="" alt="star">
-                            <p>4.9</p>
+                        <div class="card__rating">
+                            <div class="card__rating-content">
+                                <p>24min •</p>
+                                <img src="images/star--primary.png" alt="star">
+                                <p>4.9</p>
+                            </div>
+                            <button class="card__favourites">
+                                <img src="images/favourites.svg" alt="favourites">
+                            </button>
                         </div>
                     </div>
-                    <button class="button--favourites">
-                        <img src="" alt="favourites">
-                    </button>
                 </div>
                 <div class="restaurants__item card">
-                    <img src="" alt="The Chicken King">
-                    <div class="card-text">
-                        <em>Healthy</em>
+                    <img class="card__img" src="images/restaurants__item-The Chicken King.png" alt="The Chicken King">
+                    <div class="card__text">
+                        <em class="card__em card__em--primary">Healthy</em>
                         <h4>The Chicken King</h4>
-                        <div class="card-rating">
-                            <p>24min •</p>
-                            <img src="" alt="star">
-                            <p>4.8</p>
+                        <div class="card__rating">
+                            <div class="card__rating-content">
+                                <p>24min •</p>
+                                <img src="images/star--primary.png" alt="star">
+                                <p>4.8</p>
+                            </div>
+                            <button class="card__favourites">
+                                <img src="images/favourites.svg" alt="favourites">
+                            </button>
                         </div>
                     </div>
-                    <button class="button--favourites">
-                        <img src="" alt="favourites">
-                    </button>
                 </div>
-                <button class="button--viewAll">View All
-                    <img src="" alt="->">
+                <button class="card__viewAll">View All
+                    <img src="images/arrow.svg" alt="->">
                 </button>
             </div>
+        </div>
+    </section>
+
+    <section class="dishes">
+        <div class="container dishes__content">
+            <h3>Our Top <span class="span">Dishes</span></h3>
+            <div class="dishes__items cards">
+                <div class="dishes__item card">
+                    <button class="card__like"><img src="images/like.svg" alt=""></button>
+                    <img class="card__img" src="images/dishes__item-The Chicken Hell.png" alt="The Chicken Hell">
+                    <div class="card__text">
+                        <em class="card__em card__em--primary">Healthy</em>
+                        <h4>Chicken Hell</h4>
+                        <div class="card__rating">
+                            <div class="card__rating-content">
+                                <p>24min •</p>
+                                <img src="images/star--primary.png" alt="star">
+                                <p>4.8</p>
+                            </div>
+                        </div>
+                        <div class="card__cost">
+                            <p><span>$12</span>.99</p>
+                            <button><img src="images/plus.svg" alt="plus"></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="dishes__item card">
+                    <button class="card__like"><img src="images/like.svg" alt=""></button>
+                    <img class="card__img" src="images/dishes__item-The Swe Dish.png" alt="The Chicken Hell">
+                    <div class="card__text">
+                        <em class="card__em card__em--red">Trending</em>
+                        <h4>Swe Dish</h4>
+                        <div class="card__rating">
+                            <div class="card__rating-content">
+                                <p>34min •</p>
+                                <img src="images/star--primary.png" alt="star">
+                                <p>4.9</p>
+                            </div>
+                        </div>
+                        <div class="card__cost">
+                            <p><span>$19</span>.99</p>
+                            <button><img src="images/plus.svg" alt="plus"></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="dishes__item card">
+                    <button class="card__like"><img src="images/like.svg" alt=""></button>
+                    <img class="card__img" src="images/dishes__item-The Swe Dish.png" alt="The Chicken Hell">
+                    <div class="card__text">
+                        <em class="card__em card__em--green">Supreme</em>
+                        <h4>Swe Dish</h4>
+                        <div class="card__rating">
+                            <div class="card__rating-content">
+                                <p>34min •</p>
+                                <img src="images/star--primary.png" alt="star">
+                                <p>4.9</p>
+                            </div>
+                        </div>
+                        <div class="card__cost">
+                            <p><span>$19</span>.99</p>
+                            <button><img src="images/plus.svg" alt="plus"></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="dishes__item card">
+                    <button class="card__like"><img src="images/like.svg" alt=""></button>
+                    <img class="card__img" src="images/dishes__item-The Chicken Hell.png" alt="The Chicken Hell">
+                    <div class="card__text">
+                        <em class="card__em card__em--primary">Healthy</em>
+                        <h4>Chicken Hell</h4>
+                        <div class="card__rating">
+                            <div class="card__rating-content">
+                                <p>24min •</p>
+                                <img src="images/star--primary.png" alt="star">
+                                <p>4.8</p>
+                            </div>
+                        </div>
+                        <div class="card__cost">
+                            <p><span>$12</span>.99</p>
+                            <button><img src="images/plus.svg" alt="plus"></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="dishes__item card">
+                    <button class="card__like"><img src="images/like.svg" alt=""></button>
+                    <img class="card__img" src="images/dishes__item-The Swe Dish.png" alt="The Chicken Hell">
+                    <div class="card__text">
+                        <em class="card__em card__em--red">Trending</em>
+                        <h4>Swe Dish</h4>
+                        <div class="card__rating">
+                            <div class="card__rating-content">
+                                <p>34min •</p>
+                                <img src="images/star--primary.png" alt="star">
+                                <p>4.9</p>
+                            </div>
+                        </div>
+                        <div class="card__cost">
+                            <p><span>$19</span>.99</p>
+                            <button><img src="images/plus.svg" alt="plus"></button>
+                        </div>
+                    </div>
+                </div>
+                <button class="card__viewAll">View All
+                    <img src="images/arrow.svg" alt="->">
+                </button>
+            </div>
+    </section>
+
+    <section class="control">
+        <div class="container control__content">
+            <div class="control__text">
+                <h2>Control <span class="span">Purchases</span> Via Dashboard</h2>
+                <div class="control__items">
+                    <div class="control__item">
+                        <div class="control__item-info">
+                            <img src="images/dishes__item-The Chicken Hell.png" alt="Chicken Hell">
+                            <div class="control__item-text">
+                                <h4>Chicken Hell</h4>
+                                <p>On The Way</p>
+                            </div>
+                        </div>
+                        <p class="control__item-time">3:09 PM</p>
+                    </div>
+                    <div class="control__item">
+                        <div class="control__item-info">
+                            <img src="images/dishes__item-The Swe Dish.png" alt="Swe Dish">
+                            <div class="control__item-text">
+                                <h4>Swe Dish</h4>
+                                <p>Delivered</p>
+                            </div>
+                        </div>
+                        <p class="control__item-time">Yesterday</p>
+                    </div>
+                    <div class="control__item">
+                        <div class="control__item-info">
+                            <img src="images/dishes__item-The Swe Dish2.png" alt="Fish Hell Veg">
+                            <div class="control__item-text">
+                                <h4>Fish Hell Veg</h4>
+                                <p data-status="cancelled">Cancelled</p>
+                            </div>
+                        </div>
+                        <p class="control__item-time">Yesterday</p>
+                    </div>
+                </div>
+            </div>
+            <div class="control__form">
+                <div class="control__form-title">
+                    <h3>Purchases</h3>
+                    <input type="">This month
+                </div>
+                <div class="control__form-items">
+                    <div class="control__form-item">
+                        <div>
+                            <div class="info">
+                                <img src="images/wallet.svg" alt="Wallet">
+                                <div class="text">
+                                    <h4>Expense</h4>
+                                    <p>Increased By 10%</p>
+                                </div>
+                            </div>
+                            <p class="cost">$409.00</p>
+                        </div>
+                        <div class="divider">
+                            <input type="range">
+                        </div>
+                    </div>
+                    <div class="control__form-item">
+                        <div>
+                            <div class="info">
+                                <img src="images/money.svg" alt="Money">
+                                <div class="text">
+                                    <h4>Vocher Usage</h4>
+                                    <p>Increased By 5%</p>
+                                </div>
+                            </div>
+                            <p class="cost">$45.78</p>
+                        </div>
+                        <div class="divider">
+                            <input type="range">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="reviews">
+        <div class="container reviews__content">
+            <h3><span class="span">Customer</span> Say</h3>
+            <div class="reviews__card">
+                <div class="reviews__user">
+                    <div class="reviews__profile">
+                        <img src="images/alexander r.png" alt="Alexander R.">
+                        <div class="reviews__profile-info">
+                            <h4>Alexander R.</h4>
+                            <p>01 Year with Us</p>
+                        </div>
+                    </div>
+                    <img src="images/marks.svg" alt="marks">
+                </div>
+                <blockquote class="reviews__quote">
+                    Online invoice payment helps companies save time, are faster and save maximum effort for the
+                    clients and save maximum effort. Online invoice payment helps companies save time
+                </blockquote>
+                <div class="reviews__stars">
+                    <img src="images/star.svg" alt="Star">
+                    <img src="images/star.svg" alt="Star">
+                    <img src="images/star.svg" alt="Star">
+                    <img src="images/star.svg" alt="Star">
+                    <img src="images/star.svg" alt="Star">
+                </div>
+            </div>
+            <div class="reviews__secondary">
+                <div class="reviews__card">
+                    <blockquote class="reviews__quote">
+                        Online invoice payment helps companies save time, are faster and save maximum effort for the
+                        clients and save maximum effort. Online invoice payment helps companies save time
+                    </blockquote>
+                    <div class="reviews__stars">
+                        <img src="images/star.svg" alt="Star">
+                        <img src="images/star.svg" alt="Star">
+                        <img src="images/star.svg" alt="Star">
+                        <img src="images/star.svg" alt="Star">
+                        <img src="images/star.svg" alt="Star">
+                    </div>
+                </div>
+
+                <div class="reviews__card">
+                    <blockquote class="reviews__quote">
+                        Online invoice payment helps companies save time, are faster and save maximum effort for the
+                        clients and save maximum effort. Online invoice payment helps companies save time
+                    </blockquote>
+                    <div class="reviews__stars">
+                        <img src="images/star.svg" alt="Star">
+                        <img src="images/star.svg" alt="Star">
+                        <img src="images/star.svg" alt="Star">
+                        <img src="images/star.svg" alt="Star">
+                        <img src="images/star.svg" alt="Star">
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section class="subscribe">
+        <div class="container subscribe__content">
+            <h2>GET 50%</h2>
+            <form class="subscribe__form">
+                <input type="email" class="" placeholder="Enter Your Email Address" required>
+                <button type="submit" class="button button--primary">subscribe</button>
+            </form>
+            <img src="images/subscribe-img.png" alt="Dish">
         </div>
     </section>
 
@@ -180,10 +441,10 @@
             <div class="footer__info">
                 <p>© 2023 EATLY All Rights Reserved.</p>
                 <div class="footer__social-media">
-                    <img src="" alt="Instagramm">
-                    <img src="" alt="IN">
-                    <img src="" alt="Facebook">
-                    <img src="" alt="Twiter">
+                    <img src="images/Instagram.png" alt="Instagram">
+                    <img src="images/IN.png" alt="IN">
+                    <img src="images/Facebook.png" alt="Facebook">
+                    <img src="images/Twiter.png" alt="Twiter">
                 </div>
             </div>
         </div>

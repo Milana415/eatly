@@ -1,0 +1,78 @@
+.control {
+    &__content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 141px;
+        align-items: center;
+        padding: 103px 0 138px;
+        border-bottom: solid 1px $gray-light;
+    }
+
+    &__text {
+        h2 {
+            @include font(Poppins, $size-h2, 700, 58, null);
+            margin-bottom: 48px;
+        }
+    }
+
+    &__items {
+        @include flex (null, null, column, 15);
+    }
+
+    &__item {
+        background-color: $white;
+        width: 345px;
+        padding: 4px 17px;
+        @include flex (flex-end, space-between, null, null);
+
+
+        img {
+            @include size (72, 72);
+        }
+
+        &-info {
+            @include flex (center, null, null, 19);
+        }
+
+        &-text {
+            h4 {
+                @include font(Poppins, 19, 600, 26.6, null);
+                margin-bottom: 4px;
+            }
+
+            p {
+                @include font(Poppins, 12, 500, 16.8, null);
+
+                &[data-status="cancelled"] {
+                    color: rgba(241, 83, 78, 1);
+                }
+            }
+        }
+
+        &-time {
+            @include font(Poppins, 13, 500, 18.2, rgba(172, 173, 185, 1));
+
+        }
+    }
+
+    &__form {
+        background-color: $white;
+        border: 1.6px solid rgba(237, 242, 247, 1);
+        border-radius: 25px;
+        padding: 37.7px 37.7px 46px;
+
+        h3 {
+            @include font(Manrope, 28, 800, 38, rgba(26, 32, 44, 1));
+        }
+    }
+
+
+    @media (max-width: 768px) {
+        .control {
+            &__content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+    }
+}

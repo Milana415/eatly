@@ -1,7 +1,6 @@
 .features {
     background: $puple-dark url(../../images/features-bg-vector.png) no-repeat center / cover;
     padding: 49px 0;
-    margin: 0 0 103.5px 0;
 
     &__list {
         @include flex(center, center, null, 66);
@@ -16,7 +15,7 @@
         }
 
         p {
-            @include font(null, 14, null, 21.6, $puple-light);
+            @include font(null, 14, null, 22, $puple-light);
         }
     }
 

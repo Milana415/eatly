@@ -1,19 +1,106 @@
 .cards {
-    @include flex(center, center, null, 30.7);
+    align-items: center;
+    justify-items: space-between;
 
     .card {
-        img {
-            margin-bottom: 10.93px;
+        border: 1.25px solid rgba(244, 244, 246, 1);
+        box-shadow: 6px 71.35px 36px 0px rgba(229, 229, 229, 0.7);
+        border-radius: 30px;
+        background-color: $white;
+        position: relative;
+
+        &__img {
+            margin-bottom: 11px;
+            object-fit: cover;
+        }
+
+        &__em {
+            @include font(Poppins, 13, 400, 100%, null);
+            font-style: normal;
+            background-color: rgba(247, 237, 208, 1);
+            color: rgba(218, 163, 26, 1);
+            border-radius: 5px;
+            padding: 2px 7px;
+
+            &--red {
+                background-color: rgba(247, 197, 186, 1);
+                color: rgba(251, 71, 29, 1);
+            }
+
+            &--green {
+                background-color: rgba(51, 172, 100, 0.2);
+                color: rgba(48, 157, 91, 1);
+            }
         }
 
         &__text {
-            em {
-                @include font(Poppins, 12.78, 400, 100%, null);
-            }
-            
+            padding: 0 27px 18px 33px;
+
             h4 {
-                @include font(Poppins, 25.79, 600, 41.9, $black);
-                margin-bottom: 1.75px;
+                @include font(Poppins, 28, 600, 42, $black);
+                margin-bottom: 2px;
+            }
+        }
+
+        &__rating {
+            display: flex;
+            justify-content: space-between;
+            &-content {
+                @include font (Manrope, 19, 400, 26, rgba(142, 151, 166, 1));
+                @include flex (center, null, null, 11);
+            }
+        }
+
+        &__favourites {
+            border-radius: 100%;
+            border: 0px;
+            background-color: $puple-light;
+            width: 40px;
+            height: 40px;
+        }
+
+        &__like {
+            border: 0px;
+            background-color: transparent;
+            position: absolute;
+            right: 22px;
+            top: 24px;
+        }
+
+        &__cost {
+            @include flex(center, space-between, null, null);
+
+            p {
+                @include font(Manrope, 19, 700, 40, rgba(142, 151, 166, 1));
+
+                span {
+                    color: $black;
+                    font-size: 26px;
+                }
+            }
+            button {
+                border: 0px;
+                width: 44px;
+                height: 40px;
+                background-color: $black;
+                border-radius: 9px;
+
+                img {
+                    vertical-align: middle;
+                }
+            }
+        }
+
+        &__viewAll {
+            border: none;
+            background-color: transparent;
+            @include font (Poppins, 20, 500, 45, rgba(172, 173, 185, 1));
+            letter-spacing: -0.1px;
+            @include flex(center, flex-end, null, 20);
+            grid-column: span 1;
+
+            &:hover {
+                color: $puple-medium;
             }
         }
     }

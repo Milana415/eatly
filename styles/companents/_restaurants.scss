@@ -1,7 +1,17 @@
-.restaurants{
+.restaurants {
     &__content {
         padding: 100px 0 120px;
-        @include h3;
-        @import 'cards';
+        border-bottom: solid 1px $gray-light;
+
+        h3 {
+            margin-bottom: 86px;
+            text-align: center;
+        }
+    }
+
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(396px, 1fr));
+        gap: 29px;
     }
 }

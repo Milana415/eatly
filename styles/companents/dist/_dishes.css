@@ -1,0 +1,12 @@
+.dishes__content {
+  padding: 100px 0 261px;
+}
+.dishes__content h3 {
+  margin-bottom: 76px;
+  text-align: center;
+}
+.dishes__items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+  gap: 30px;
+}
