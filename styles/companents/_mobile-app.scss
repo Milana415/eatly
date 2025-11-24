@@ -1,7 +1,7 @@
 .mobile-app {
     &__content {
         @include flex(null, null, null, 287);
-        padding: 104px 0 98px 0;
+        padding: 100px 0 98px 0;
         border-bottom: solid 1px $gray-light;
     }
 

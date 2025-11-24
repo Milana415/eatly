@@ -1,5 +1,12 @@
 .main {
-    padding: 119px 0 130px;
+
+    .container {
+        @include flex (center, null, null, 174);
+    }
+
+    &__content {
+        padding: 119px 0 130px;
+    }
 
     &__over {
         color: rgba(32, 31, 31, 0.2);
@@ -47,6 +54,8 @@
         margin-bottom: 33px;
 
         .button {
+            @include font(Poppins, 16.3, 500, null, null);
+
             &--primary {
                 padding: 18px 30px 17px 29px;
             }
@@ -63,11 +72,31 @@
 
         &-rating {
             @include flex(center, center, null, 9);
-            @include font(Inter, 16, 500, 24, rgba(51, 65, 85, 0.7))
+            @include font(Manrope, 16, 500, 24, rgba(51, 65, 85, 0.7))
         }
     }
 
     &__stars {
         @include flex(center, null, null, 4);
+    }
+
+
+    &__banner {
+        &-img {
+            @include size (424, 424);
+            position: relative;
+
+            &::after {
+                content: url('../../images/main-card.png');
+                position: absolute;
+                top: -32px;
+                left: -calc(304px + 15px);
+            }
+
+            &::before {
+                content: url('../../images/main-grafic.svg');
+                position: absolute;
+            }
+        }
     }
 }

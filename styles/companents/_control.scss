@@ -17,14 +17,18 @@
 
     &__items {
         @include flex (null, null, column, 15);
+
+        :hover {
+            box-shadow: 0px 20.07px 30.1px 0px rgba(70, 70, 70, 0.1);
+        }
     }
 
     &__item {
         background-color: $white;
         width: 345px;
         padding: 4px 17px;
+        border-radius: 12px;
         @include flex (flex-end, space-between, null, null);
-
 
         img {
             @include size (72, 72);
@@ -60,9 +64,78 @@
         border: 1.6px solid rgba(237, 242, 247, 1);
         border-radius: 25px;
         padding: 37.7px 37.7px 46px;
+        box-shadow: 0px 20.07px 30.1px 0px rgba(70, 70, 70, 0.1);
 
-        h3 {
-            @include font(Manrope, 28, 800, 38, rgba(26, 32, 44, 1));
+
+        &-header {
+            @include flex (center, space-between, null, null);
+            margin-bottom: 38px;
+
+            h3 {
+                @include font(Manrope, 28, 800, 38, rgba(26, 32, 44, 1));
+            }
+
+            button {
+                @include flex (center, null, null, 12.6);
+                background-color: rgba(250, 250, 250, 1);
+                padding: 12.7px 25px 12.7px 18.8px;
+                border: 0;
+                border-radius: 12.56px;
+                @include font (Manrope, 19, 600, 28, rgba(26, 32, 44, 1));
+            }
+        }
+
+        &-items {
+            @include flex (null, null, column, 22);
+
+        }
+
+        &-item {
+            padding: 25px;
+            border: 1.25px solid rgba(244, 244, 246, 1);
+            border-radius: 19px;
+
+            &-header {
+                @include flex (center, space-between, null, null);
+                margin-bottom: 20.4px;
+            }
+        }
+
+        &-info {
+            @include flex (center, null, null, 2.4);
+        }
+
+        &-icon {
+            @include size (50.3, 50.3);
+            border-radius: 100%;
+            text-align: center;
+
+            &--wallet {
+                background-color: rgba(244, 240, 255, 1);
+            }
+
+            &--money {
+                background-color: rgba(242, 253, 246, 1);
+            }
+        }
+
+        &-text {
+            h4 {
+                @include font(Manrope, 19, 800, 28, rgba(26, 32, 44, 1));
+                letter-spacing: 0.63px;
+                margin-bottom: 3px;
+            }
+
+            p {
+                @include font(Manrope, 16, 500, 24, rgba(160, 174, 192, 1));
+                letter-spacing: 0.63px;
+                margin-bottom: 3px;
+            }
+        }
+
+        &-cost {
+            @include font(Manrope, 22, 800, 33, rgba(26, 32, 44, 1));
+            letter-spacing: 0.31px;
         }
     }
 

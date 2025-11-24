@@ -8,14 +8,15 @@
 
     &__item {
         @include flex(center, null, column, 11);
-        max-width: 202px;
+        min-width: 166px;
+        max-width: 209px;
 
         h3 {
-            @include font(Poppins, 42, null, null, $white);
+            @include font(Public Sans, 43, 700, 54, $white);
         }
 
         p {
-            @include font(null, 14, null, 22, $puple-light);
+            @include font(Inter, 14.4, 500, 22, $puple-light);
         }
     }
 
