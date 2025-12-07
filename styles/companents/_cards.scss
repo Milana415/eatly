@@ -4,10 +4,14 @@
 
     .card {
         border: 1.25px solid rgba(244, 244, 246, 1);
-        box-shadow: 6px 71.35px 36px 0px rgba(229, 229, 229, 0.7);
         border-radius: 30px;
         background-color: $white;
         position: relative;
+
+        &:hover {
+            box-shadow: 6px 71.35px 36px 0px rgba(229, 229, 229, 0.7);
+            cursor: pointer;
+        }
 
         &__img {
             margin-bottom: 11px;
@@ -45,6 +49,7 @@
         &__rating {
             display: flex;
             justify-content: space-between;
+
             &-content {
                 @include font (Manrope, 19, 400, 26, rgba(142, 151, 166, 1));
                 @include flex (center, null, null, 11);
@@ -78,6 +83,7 @@
                     font-size: 26px;
                 }
             }
+
             button {
                 border: 0px;
                 width: 44px;
@@ -90,18 +96,19 @@
                 }
             }
         }
+    }
+}
 
-        &__viewAll {
-            border: none;
-            background-color: transparent;
-            @include font (Poppins, 20, 500, 45, rgba(172, 173, 185, 1));
-            letter-spacing: -0.1px;
-            @include flex(center, flex-end, null, 20);
-            grid-column: span 1;
+.card__viewAll {
+    border: none;
+    background-color: transparent;
+    @include font (Poppins, 20, 500, 45, rgba(172, 173, 185, 1));
+    letter-spacing: -0.1px;
+    @include flex(center, flex-end, null, 20);
+    grid-column: span 1;
+    align-self: flex-end;
 
-            &:hover {
-                color: $puple-medium;
-            }
-        }
+    &:hover {
+        color: $puple-medium;
     }
 }

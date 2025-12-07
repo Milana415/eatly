@@ -24,6 +24,7 @@ body {
 
 .logo {
     @include flex(center, null, null, 11);
+    text-decoration: none;
 
     p {
         @include font(Poppins, 22, 600, null, $puple-medium);
@@ -85,4 +86,5 @@ h3 {
 @import 'companents/control';
 @import 'companents/reviews';
 @import 'companents/subscribe';
+@import 'companents//error';
 @import 'companents/footer';

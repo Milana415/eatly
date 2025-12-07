@@ -17,10 +17,6 @@
 
     &__items {
         @include flex (null, null, column, 15);
-
-        :hover {
-            box-shadow: 0px 20.07px 30.1px 0px rgba(70, 70, 70, 0.1);
-        }
     }
 
     &__item {
@@ -29,6 +25,10 @@
         padding: 4px 17px;
         border-radius: 12px;
         @include flex (flex-end, space-between, null, null);
+
+        &:hover {
+            box-shadow: 0px 20.07px 30.1px 0px rgba(70, 70, 70, 0.1);
+        }
 
         img {
             @include size (72, 72);
@@ -64,7 +64,10 @@
         border: 1.6px solid rgba(237, 242, 247, 1);
         border-radius: 25px;
         padding: 37.7px 37.7px 46px;
-        box-shadow: 0px 20.07px 30.1px 0px rgba(70, 70, 70, 0.1);
+
+        &:hover {
+            box-shadow: 0px 20.07px 30.1px 0px rgba(70, 70, 70, 0.1);
+        }
 
 
         &-header {
@@ -107,6 +110,7 @@
 
         &-icon {
             @include size (50.3, 50.3);
+            @include flex (center, center, null, null);
             border-radius: 100%;
             text-align: center;
 
@@ -137,15 +141,95 @@
             @include font(Manrope, 22, 800, 33, rgba(26, 32, 44, 1));
             letter-spacing: 0.31px;
         }
-    }
+
+        &-divider {
+            width: 100%;
+            margin: 0 auto;
+
+            input[type="range"] {
+                -webkit-appearance: none;
+                appearance: none;
+                width: 100%;
+                height: $slider-track-height;
+                background: $slider-track-bg;
+                border-radius: 56px;
+                outline: none;
+                cursor: pointer;
+
+                &::-webkit-slider-runnable-track {
+                    height: $slider-track-height;
+                    border-radius: $slider-border-radius;
+                    background: linear-gradient(to right,
+                            var(--fill-color) 0%,
+                            var(--fill-color) var(--progress, 50%),
+                            $slider-track-bg var(--progress, 50%),
+                            $slider-track-bg 100%);
+                }
+
+                &::-webkit-slider-thumb {
+                    -webkit-appearance: none;
+                    appearance: none;
+                    width: $slider-thumb-size;
+                    height: $slider-thumb-size;
+                    border-radius: 50%;
+                    background: var(--fill-color);
+                    border: none;
+                    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+                    margin-top: ($slider-track-height - $slider-thumb-size) / 2;
+                    transition: background 0.2s, transform 0.2s;
+
+                    &:hover {
+                        background: var(--fill-color-hover);
+                        transform: scale(1.1);
+                    }
+
+                    &:active {
+                        transform: scale(1.15);
+                    }
+                }
 
 
-    @media (max-width: 768px) {
-        .control {
-            &__content {
-                grid-template-columns: 1fr;
-                gap: 40px;
+                &::-moz-range-thumb {
+                    width: $slider-thumb-size;
+                    height: $slider-thumb-size;
+                    border-radius: 50%;
+                    background: var(--fill-color);
+                    border: none;
+                    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+                    cursor: pointer;
+                    transition: background 0.2s;
+
+                    &:hover {
+                        background: var(--fill-color-hover);
+                    }
+                }
+
+                &::-moz-range-track {
+                    height: $slider-track-height;
+                    background: $slider-track-bg;
+                    border-radius: $slider-border-radius;
+                }
             }
+        }
+
+        &-item:nth-child(1) .control__form-divider input[type="range"] {
+            --fill-color: rgba(108, 95, 188, 1);
+            --fill-color-hover: #4d3dc6;
+        }
+
+        &-item:nth-child(2) .control__form-divider input[type="range"] {
+            --fill-color: rgba(251, 173, 24, 1);
+            --fill-color-hover: #F57F17;
+        }
+    }
+}
+
+
+@media (max-width: 768px) {
+    .control {
+        &__content {
+            grid-template-columns: 1fr;
+            gap: 40px;
         }
     }
 }

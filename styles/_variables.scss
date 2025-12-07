@@ -1,16 +1,20 @@
-$puple-dark: #5C4EAE;
-$puple-light: #C5BFED;
+$puple-dark: rgb(92, 78, 174);
+$puple-light: #c5bfed;
 $puple-medium: rgba(108, 95, 188, 1);
-$bg-light: #F9F9F9;
+$bg-light: rgb(249, 249, 249);
 $bg-footer: rgba(234, 234, 234, 1);
-$gray-dark: #c5c5c515;
+$gray-dark: rgba(197, 197, 197, 0.08);
 $gray-medium: rgba(103, 103, 103, 1);
 $gray-light: rgba(203, 203, 203, 1);
 $white: rgba(255, 255, 255, 1);
 $black: rgba(50, 49, 66, 1);
 
 
+$slider-track-height: 6.7px;
+$slider-border-radius: 56px;
+$slider-track-bg: rgba(186, 186, 186, 0.2);
+$slider-thumb-size: 20px;
+
+
 $size-h2: 50.92;
-
-
 $font-700: 700;

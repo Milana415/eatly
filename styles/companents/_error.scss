@@ -1,0 +1,39 @@
+.error {
+    padding: 130px 0;
+
+    &__content {
+        background: $puple-medium url("../../images/subscribe-bg.png") no-repeat center/cover;
+        border-radius: 30px;
+        position: relative;
+        padding: 80px 80px;        
+        box-shadow: 6px 7px 60px 0px rgb(157 114 255 / 70%);
+
+        img {
+            @include size(220, 220);
+
+            &:nth-of-type(1) {
+                position: absolute;
+                left: 52px;
+                bottom: 64px;
+            }
+
+            &:nth-of-type(2) {
+                position: absolute;
+                right: 72px;
+                top: 64px;
+            }
+        }
+    }
+
+    &__text {
+        text-align: center;
+
+        h1 {
+            @include font (Poppins, 70, 800, 70, rgba(222, 220, 239, 1));
+        }
+
+        p {
+            @include font (Poppins, 22, null, 26, rgba(222, 220, 239, 1));
+        }
+    }
+}

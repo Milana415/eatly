@@ -1,7 +1,9 @@
 .mobile-app {
     &__content {
-        @include flex(null, null, null, 287);
-        padding: 100px 0 98px 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 160px;
+        padding: 100px 0 123px 0;
         border-bottom: solid 1px $gray-light;
     }
 
@@ -22,6 +24,7 @@
 
     &__text {
         max-width: 500px;
+        padding: 85px 0 0 0;
 
         h2 {
             @include font(Poppins, $size-h2, 700, 58, null);
@@ -32,8 +35,8 @@
             margin-bottom: 66px;
 
             li {
-                @include font(Inter, 20, 400, 30, $gray-medium);
-                margin-bottom: 28px;
+                @include font(Inter, 20, 400, 31, $gray-medium);
+                margin: 0 0 28px 31px;
             }
         }
 
@@ -48,6 +51,15 @@
                 top: 50px;
                 left: 170px;
             }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .control {
+        &__content {
+            grid-template-columns: 1fr;
+            gap: 40px;
         }
     }
 }

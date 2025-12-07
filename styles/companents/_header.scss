@@ -20,6 +20,14 @@
                 a {
                     @include a();
                     color: rgba(96, 96, 96, 1);
+
+                    &[data-status="active"] {
+                        color:$puple-medium;
+                    }
+
+                    &:hover {
+                        color: $puple-dark;
+                    }
                 }
             }
         }
