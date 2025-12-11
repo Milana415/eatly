@@ -20,6 +20,10 @@ body {
 .container {
     max-width: 1246px;
     margin: 0 auto;
+
+    @include media($xl) {
+       padding: 0 30px;
+    }
 }
 
 .logo {

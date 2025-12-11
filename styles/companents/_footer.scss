@@ -38,3 +38,41 @@
         @include flex(center, center, null, 54);
     }
 }
+
+@media (width <=$md) {
+    .footer {
+        &__nav {
+            padding: 55px 0 33px;
+            @include flex(flex-start, space-between, column, 60);
+        }
+
+        &__menu {
+            @include flex(flex-start, space-between, column, 30);
+
+            li {
+                a {
+                    text-transform: uppercase;
+                    @include font(null, 14, 500, 19, null);
+                }
+            }
+        }
+
+        &__info {
+            padding: 26px 0 36px;
+            @include flex(center, space-between, column, 60);
+
+            p {
+                @include font(null, 13.5, 500, 20, null);
+            }
+        }
+
+        &__social-media {
+            @include flex(center, center, null, 20);
+
+            img {
+                height: 16px;;
+                width: auto;
+            }
+        }
+    }
+}

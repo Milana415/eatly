@@ -14,7 +14,8 @@
 
     &__items {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+        justify-content: center;
+        grid-template-columns: repeat(auto-fit, 225px);
         gap: 30px;
 
         .card {
@@ -31,6 +32,10 @@
             &__rating {
                 margin-bottom: 13px;
             }
+        }
+
+        @include media ($sm) {
+            grid-template-columns: repeat(auto-fit, minmax(225px, 200px));
         }
     }
 

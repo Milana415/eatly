@@ -1,39 +1,28 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const burger = document.querySelector('.header__burger');
-  const mobileMenu = document.querySelector('.header__mobile-menu');
+    const burger = document.querySelector('.header__burger');
+    const nav = document.querySelector('.header__nav');
 
-  if (!burger || !mobileMenu) return;
+    if (!burger || !nav) return;
 
-  burger.addEventListener('click', () => {
-    const isExpanded = burger.getAttribute('aria-expanded') === 'true';
-    const newState = !isExpanded;
+    const toggleNav = () => {
+        const isOpen = nav.classList.toggle('is-open');
+        burger.setAttribute('aria-expanded', isOpen);
+        document.body.style.overflow = isOpen ? 'hidden' : '';
+    };
 
-    // Обновляем ARIA
-    burger.setAttribute('aria-expanded', newState);
-    mobileMenu.setAttribute('aria-expanded', newState);
+    burger.addEventListener('click', toggleNav);
 
-    // Для hidden="true"/"false" (можно использовать и class)
-    mobileMenu.hidden = !newState;
-  });
-
-  // Закрытие при клике по ссылке
-  mobileMenu.querySelectorAll('.mobile-menu__link').forEach(link => {
-    link.addEventListener('click', () => {
-      burger.setAttribute('aria-expanded', 'false');
-      mobileMenu.setAttribute('aria-expanded', 'false');
-      mobileMenu.hidden = true;
+    nav.addEventListener('click', (e) => {
+        if (e.target.closest('a')) {
+            nav.classList.remove('is-open');
+            burger.setAttribute('aria-expanded', 'false');
+            document.body.style.overflow = '';
+        }
     });
-  });
 
-  // Закрытие при клике вне меню (опционально)
-  document.addEventListener('click', (e) => {
-    const isClickInside = burger.contains(e.target) || mobileMenu.contains(e.target);
-    const isExpanded = burger.getAttribute('aria-expanded') === 'true';
-
-    if (!isClickInside && isExpanded) {
-      burger.setAttribute('aria-expanded', 'false');
-      mobileMenu.setAttribute('aria-expanded', 'false');
-      mobileMenu.hidden = true;
-    }
-  });
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && nav.classList.contains('is-open')) {
+            toggleNav();
+        }
+    });
 });

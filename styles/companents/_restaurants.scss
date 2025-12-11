@@ -16,11 +16,17 @@
 
     &__items {
         display: grid;
+        justify-content: center;
         grid-template-columns: repeat(auto-fit, minmax(396px, 1fr));
         gap: 29px;
+
+        @include media ($sm) {
+            grid-template-columns: repeat(auto-fit, minmax(225px, 200px));
+            justify-content: center;
+        }
     }
 
-    
+
     &__title {
         @include flex (center, space-between, null, null);
     }

@@ -5,7 +5,7 @@
         background: $puple-medium url("../../images/subscribe-bg.png") no-repeat center/cover;
         border-radius: 30px;
         position: relative;
-        padding: 80px 80px;        
+        padding: 80px 80px;
         box-shadow: 6px 7px 60px 0px rgb(157 114 255 / 70%);
 
         img {
@@ -34,6 +34,43 @@
 
         p {
             @include font (Poppins, 22, null, 26, rgba(222, 220, 239, 1));
+        }
+    }
+}
+
+
+@media (width <=$sm) {
+    .error {
+        padding: 80px 0 100px;
+
+        &__content {
+            padding: 80px 20px;
+
+            img {
+                @include size(120, 120);
+
+                &:nth-of-type(1) {
+                    left: 28px;
+                    bottom: -64px;
+                }
+
+                &:nth-of-type(2) {
+                    right: 20px;
+                    top: -40px;
+                }
+            }
+        }
+
+        &__text {
+            text-align: center;
+
+            h1 {
+                @include font (Poppins, 38, 800, 42, rgba(222, 220, 239, 1));
+            }
+
+            p {
+                @include font (Poppins, 14, null, 16, rgba(222, 220, 239, 1));
+            }
         }
     }
 }

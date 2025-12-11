@@ -87,10 +87,9 @@
             position: relative;
 
             &::after {
-                content: url('../../images/main-card.png');
+                content: url('../../images/mobile-app-vector.png');
                 position: absolute;
-                top: -32px;
-                left: -calc(304px + 15px);
+                left: calc(304px + 15px);
             }
 
             &::before {

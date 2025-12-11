@@ -22,7 +22,7 @@
     color: $color;
 }
 
-@mixin size($w, $h){
+@mixin size($w, $h) {
     width: $w + px;
     height: $h + px;
 }
@@ -34,4 +34,14 @@
 @mixin h3() {
     @include font(Poppins-SemiBold, 45, 500, 26, $gray-dark);
     text-align: center;
+}
+
+@mixin media($var) {
+    @media (width <=$var) {
+        @content;
+    }
+}
+
+@mixin container($var) {
+    max-width: ($var - 60px);
 }
