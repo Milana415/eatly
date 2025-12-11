@@ -1,13 +1,74 @@
 .header {
+    position: relative;
+
     &__content {
         @include flex(center, center, null, 103);
         padding: 48px 0 24px 0;
         border-bottom: solid 1px $gray-light;
+        position: relative;
+    }
+
+    &__overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+        z-index: 1001;
+
+
+        &.active {
+            opacity: 1;
+            pointer-events: all;
+        }
     }
 
     &__nav {
         @include flex(center, space-between, null, null);
         width: 100%;
+        z-index: 1002;
+    }
+
+    &__burger {
+        @include flex(center, center, column, null);
+        display: none;
+        cursor: pointer;
+        width: 36px;
+        height: 28px;
+        z-index: 1003;
+
+        span {
+            height: 2.5px;
+            width: 100%;
+            background: $black;
+            border-radius: 2px;
+            margin-bottom: 6px;
+            transition: all 0.3s ease;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        &.active {
+            span {
+                &:nth-child(1) {
+                    transform: rotate(45deg) translate(5px, 5px);
+                }
+
+                &:nth-child(2) {
+                    opacity: 0;
+                }
+
+                &:nth-child(3) {
+                    transform: rotate(-45deg) translate(7px, -6px);
+                }
+            }
+        }
     }
 
     &__menu {
@@ -37,12 +98,77 @@
     &__buttons {
         @include flex(center, center, null, 9);
     }
+
+    &.scrolled {
+        @include font (null, 24, 700, null, null);
+        transition: font-size 0.3s ease;
+        padding: 10px 30px;
+    }
 }
 
 @media (width <=$sm) {
     .header {
         &__nav {
-            display: none;
+            @include flex (center, center, column, null);
+            position: fixed;
+            top: 0;
+            right: -100%;
+            height: 100vh;
+            width: 80%;
+            max-width: 360px;
+            background: $white;
+            border-radius: 8px 0 0 8px;
+            box-shadow: 0 10px 12px rgba(0, 0, 0, 0.5);
+            transition: right 0.5s ease;
+            z-index: 1002;
+            padding-top: 80px;
+
+            &.open {
+                right: 0;
+            }
+        }
+
+        &__menu {
+            width: 100%;
+
+            ul {
+                @include flex (null, null, column, 30);
+                flex-direction: column;
+                gap: 30px;
+
+                li {
+                    text-align: center;
+
+                    a {
+                        font-size: 18px;
+                        padding: 10px 0;
+                        display: block;
+                    }
+                }
+            }
+        }
+
+        &__buttons {
+                @include flex (null, null, column, 15);
+                margin-top: 30px;
+                width: 80%;
+
+                button {
+                    width: 100%;
+                }
+            }
+
+        &__burger {
+            display: flex;
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        &__content {
+            justify-content: space-between;
+            padding: 20px 0;
         }
     }
 }

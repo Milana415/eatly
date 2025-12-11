@@ -58,6 +58,11 @@ body {
     }
 }
 
+.lock {
+  overflow: hidden;
+  height: 100%;
+}
+
 h3 {
     @include font(Poppins, 45, 600, 26, $black);
 }

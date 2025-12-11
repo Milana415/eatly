@@ -1,28 +1,19 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const burger = document.querySelector('.header__burger');
-    const nav = document.querySelector('.header__nav');
+const burger = document.getElementById('burger');
+const nav = document.querySelector('.header__nav');
+const overlay = document.getElementById('overlay');
 
-    if (!burger || !nav) return;
+if (burger && nav && overlay) {
+  burger.addEventListener('click', () => {
+    burger.classList.toggle('active');
+    nav.classList.toggle('open');
+    overlay.classList.toggle('active');
+    document.body.classList.toggle('lock');
+  });
 
-    const toggleNav = () => {
-        const isOpen = nav.classList.toggle('is-open');
-        burger.setAttribute('aria-expanded', isOpen);
-        document.body.style.overflow = isOpen ? 'hidden' : '';
-    };
-
-    burger.addEventListener('click', toggleNav);
-
-    nav.addEventListener('click', (e) => {
-        if (e.target.closest('a')) {
-            nav.classList.remove('is-open');
-            burger.setAttribute('aria-expanded', 'false');
-            document.body.style.overflow = '';
-        }
-    });
-
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && nav.classList.contains('is-open')) {
-            toggleNav();
-        }
-    });
-});
+  overlay.addEventListener('click', () => {
+    burger.classList.remove('active');
+    nav.classList.remove('open');
+    overlay.classList.remove('active');
+    document.body.classList.remove('lock');
+  });
+}
