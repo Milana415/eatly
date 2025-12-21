@@ -1,0 +1,47 @@
+.faq {
+    .container {
+        padding: 196px 0 174px 0;
+
+        h2 {
+            @include font (Poppins, 45, 600, 54, null);
+            max-width: 408px;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        h3 {
+            @include font (Poppins, 24, 600, 60, $black);
+        }
+
+        .plus {
+            @include size (30, 30);
+            background: $puple-medium;
+            border-radius: 100%;
+
+            &::after {
+                @include size (1, 10.6);
+                background: $white;
+            }
+
+            &::before {
+                @include size (1, 10.6);
+                background: $white;
+                rotate: 90deg;
+            }
+        }
+    }
+
+    &__item {
+        padding: 28px 0 16px 0;
+        border-bottom: 1px solid rgba(173, 173, 173, 1);
+
+        &-title {
+            @include flex (center, space-between, null, null);
+        }
+
+        &-cont {
+            @include font (Poppins, 20, 400, 32, $gray-medium);
+            letter-spacing: 1%;
+        }
+    }
+}

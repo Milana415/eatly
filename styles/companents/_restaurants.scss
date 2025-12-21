@@ -31,3 +31,11 @@
         @include flex (center, space-between, null, null);
     }
 }
+
+@include media($md) {
+    .restaurants {
+        .container {
+            padding: 100px 60px 120px 60px;
+        }
+    }
+}

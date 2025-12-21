@@ -26,7 +26,7 @@
         max-width: 500px;
         padding: 85px 0 0 0;
 
-        h2 {
+        .h2 {
             @include font(Poppins, $size-h2, 700, 58, null);
             margin-bottom: 63px;
         }
@@ -55,11 +55,30 @@
     }
 }
 
-@media (max-width: 768px) {
-    .control {
+@include media($lg) {
+    .mobile-app {
         &__content {
-            grid-template-columns: 1fr;
-            gap: 40px;
+            @include flex(center, space-around, null, null);
+        }
+
+        &__img {
+            margin: 0;
+        }
+
+        &__text {
+            &::after {
+                top: 80px;
+                rotate: 260deg;
+            }
+        }
+    }
+}
+
+@include media($md) {
+    .mobile-app {
+        &__content {
+            flex-direction: column-reverse;
+            align-items: center;
         }
     }
 }

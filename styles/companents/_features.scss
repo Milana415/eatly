@@ -26,3 +26,16 @@
         background-color: $gray-dark;
     }
 }
+
+@include media($md) {
+    .features {
+        &__list {
+            gap: 0;
+            flex-direction: column;
+        }
+
+        &__line {
+            rotate: 90deg;
+        }
+    }
+}

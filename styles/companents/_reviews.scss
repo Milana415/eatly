@@ -13,12 +13,27 @@
         max-width: 528px;
         padding: 38px 43px;
         border-radius: 21px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+
+        &:hover {
+            .reviews__user {
+                display: flex;
+            }
+        }
     }
 
     &__user {
-        @include flex (center, space-between, null, null);
+        @include flex(center, space-between, null, null);
         margin-bottom: 32px;
+        display: none;
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: opacity 0.3s ease, transform 0.3s ease, display 0s;
+
+        .reviews__card:hover & {
+            display: flex;
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
 
     &__profile {
@@ -54,12 +69,54 @@
         }
     }
 
-    &__secondary {
-        @include flex (center, null, null, 46);
+    .flickity-page-dots {
+        bottom: -22px;
 
-        .reviews__quote {
-            color: rgba(150, 150, 150, 1);
-            margin-bottom: 32px;
+        .dot {
+            @include size (40, 4);
+            border-radius: 50%;
+            background: $puple-light;
+            transition: background 0.3s ease;
+
+            &.is-selected {
+                background: $puple-medium;
+                width: 40px;
+                border-radius: 6px;
+            }
         }
     }
+
+    .flickity-prev-next-button {
+        display: none;
+    }
+
+    /* width: 44px;
+        height: 44px;
+        background: $white;
+        border-radius: 50%;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        opacity: 0.8;
+        transition: opacity 0.2s;
+
+        &:hover {
+            opacity: 1;
+            background: $puple-medium;
+
+            svg {
+                fill: white;
+            }
+        }
+
+        &.previous {
+            left: -60px;
+        }
+
+        &.next {
+            right: -60px;
+        }
+    }
+
+    .flickity-viewport {
+        padding: 0 60px;
+    }*/
 }

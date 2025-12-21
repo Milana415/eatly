@@ -1,8 +1,11 @@
 "use strict";
 
-document.querySelectorAll('.control__form-divider input[type="range"]').forEach(function (slider) {
+document.querySelectorAll('input[type="range"]').forEach(function (slider) {
   var updateProgress = function updateProgress() {
-    var percent = (slider.value - slider.min) / (slider.max - slider.min) * 100;
+    var min = parseFloat(slider.min) || 0;
+    var max = parseFloat(slider.max) || 100;
+    var value = parseFloat(slider.value) || 0;
+    var percent = (value - min) / (max - min) * 100;
     slider.style.setProperty('--progress', "".concat(percent, "%"));
   };
 

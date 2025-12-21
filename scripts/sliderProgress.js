@@ -1,6 +1,9 @@
-document.querySelectorAll('.control__form-divider input[type="range"]').forEach(slider => {
+document.querySelectorAll('input[type="range"]').forEach(slider => {
   const updateProgress = () => {
-    const percent = ((slider.value - slider.min) / (slider.max - slider.min)) * 100;
+    const min = parseFloat(slider.min) || 0;
+    const max = parseFloat(slider.max) || 100;
+    const value = parseFloat(slider.value) || 0;
+    const percent = ((value - min) / (max - min)) * 100;
     slider.style.setProperty('--progress', `${percent}%`);
   };
 

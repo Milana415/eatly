@@ -1,7 +1,7 @@
 .main {
 
     .container {
-        @include flex (center, null, null, 174);
+        @include flex (center, space-between, null, null);
     }
 
     &__content {
@@ -82,6 +82,8 @@
 
 
     &__banner {
+        margin-right: 80px;
+
         &-img {
             @include size (424, 424);
             position: relative;
@@ -96,6 +98,43 @@
                 content: url('../../images/main-grafic.svg');
                 position: absolute;
             }
+        }
+    }
+}
+
+@include media($lg) {
+    .main {
+        &__title {
+            font-size: 55px;
+        }
+
+        &__info {
+            font-size: 16px;
+        }
+
+        &__banner {
+            margin-right: 0;
+
+            &-img {
+                @include size (324, 324);
+            }
+        }
+    }
+}
+
+@include media($md) {
+    .main {
+        .container {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        &__content {
+            padding-bottom: 48px;
+        }
+
+        &__banner {
+            padding-bottom: 80px;
         }
     }
 }

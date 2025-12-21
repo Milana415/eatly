@@ -9,7 +9,7 @@
     }
 
     &__text {
-        h2 {
+        .h2 {
             @include font(Poppins, $size-h2, 700, 58, null);
             margin-bottom: 48px;
         }

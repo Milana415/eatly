@@ -6,7 +6,7 @@
         padding: 37px 72px 61px 66px;
         margin-bottom: 216px;
 
-        h2 {
+        .h2 {
             @include font (Poppins, 70, 800, null, rgba(222, 220, 239, 1));
         }
 
@@ -42,6 +42,18 @@
             letter-spacing: 3%;
             text-transform: uppercase;
 
+        }
+    }
+}
+
+@include media($md) {
+    .subscribe {
+        &__content {
+            padding-bottom: 164px;
+
+            img {
+                top: 264px;
+            }
         }
     }
 }

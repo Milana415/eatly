@@ -20,9 +20,11 @@ body {
 .container {
     max-width: 1246px;
     margin: 0 auto;
+}
 
-    @include media($xl) {
-       padding: 0 30px;
+@include media($xl) {
+    .container {
+        padding: 0 30px;
     }
 }
 
@@ -32,6 +34,12 @@ body {
 
     p {
         @include font(Poppins, 22, 600, null, $puple-medium);
+    }
+}
+
+@include media($lg) {
+    .logo {
+        font-style: 20px;
     }
 }
 
@@ -59,8 +67,8 @@ body {
 }
 
 .lock {
-  overflow: hidden;
-  height: 100%;
+    overflow: hidden;
+    height: 100%;
 }
 
 h3 {
@@ -95,5 +103,7 @@ h3 {
 @import 'companents/control';
 @import 'companents/reviews';
 @import 'companents/subscribe';
-@import 'companents//error';
+@import 'companents/main-menu';
+@import 'companents/faq';
+@import 'companents/error';
 @import 'companents/footer';

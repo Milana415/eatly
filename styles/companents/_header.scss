@@ -106,7 +106,26 @@
     }
 }
 
-@media (width <=$sm) {
+@include media ($lg) {
+    .header {
+        &__content {
+            gap: 40px;
+        }
+
+        &__menu {
+            ul {
+                gap: 44px;
+            }
+        }
+
+        &__nav a,
+        button {
+            font-size: 16px;
+        }
+    }
+}
+
+@include media ($md) {
     .header {
         &__nav {
             @include flex (center, center, column, null);
@@ -149,14 +168,14 @@
         }
 
         &__buttons {
-                @include flex (null, null, column, 15);
-                margin-top: 30px;
-                width: 80%;
+            @include flex (null, null, column, 15);
+            margin-top: 30px;
+            width: 80%;
 
-                button {
-                    width: 100%;
-                }
+            button {
+                width: 100%;
             }
+        }
 
         &__burger {
             display: flex;

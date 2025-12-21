@@ -43,3 +43,11 @@
         @include flex (center, space-between, null, null);
     }
 }
+
+@include media($md) {
+    .dishes {
+        .container {
+            padding: 100px 60px 120px 60px;
+        }
+    }
+}
