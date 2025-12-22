@@ -75,6 +75,13 @@ h3 {
     @include font(Poppins, 45, 600, 26, $black);
 }
 
+@include media($sm) {
+    h3 {
+        font-size: 36px;
+        line-height: 32px;
+    }
+}
+
 ::-webkit-scrollbar {
     width: 12px;
 }

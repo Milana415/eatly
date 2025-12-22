@@ -37,5 +37,11 @@
         .container {
             padding: 100px 60px 120px 60px;
         }
+
+        &__content {
+            h3 {
+                line-height: 32px;
+            }
+        }
     }
 }

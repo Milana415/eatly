@@ -112,8 +112,42 @@
     @include flex(center, flex-end, null, 20);
     grid-column: span 1;
     align-self: flex-end;
+    @include a();
+
+    svg {
+        rotate: -90deg;
+    }
 
     &:hover {
         color: $puple-medium;
+        cursor: pointer;
+
+        svg {
+            path {
+                fill: $puple-medium;
+            }
+        }
+    }
+}
+
+@include media($sm) {
+    .cards {
+        .card {
+            &__text {
+                padding: 0 18px 18px;
+
+                h4 {
+                    font-size: 18px;
+                    line-height: 28px;
+                }
+            }
+
+            &__rating {
+                &-content {
+                    font-size: 14px;
+                    line-height: 16px;
+                }
+            }
+        }
     }
 }

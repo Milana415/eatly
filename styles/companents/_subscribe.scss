@@ -46,6 +46,14 @@
     }
 }
 
+@include media($lg) {
+    .subscribe {
+        &__form {
+            width: 36vw;
+        }
+    }
+}
+
 @include media($md) {
     .subscribe {
         &__content {
@@ -53,6 +61,76 @@
 
             img {
                 top: 264px;
+            }
+        }
+
+        &__form {
+            width: 60vw;
+        }
+    }
+}
+
+@include media($sm) {
+    .subscribe {
+        &__content {
+            padding: 30px 26px 164px;
+
+            img {
+                top: 214px;
+                @include size (220, 220);
+            }
+        }
+
+        .h2 {
+            text-align: center;
+            font-size: 56px;
+        }
+
+        &__form {
+            margin: 0 auto;
+            padding: 5px 7px 5px 10px;
+
+            .button {
+                font-size: 13px;
+                padding: 14px 18px;
+            }
+
+            input {
+                &::placeholder {
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+}
+
+@include media($xs) {
+    .subscribe {
+        &__content {
+            padding: 24px 22px 140px;
+
+            img {
+                top: 184px;
+                @include size (160, 160);
+            }
+        }
+
+        .h2 {
+            font-size: 42px;
+        }
+
+        &__form {
+            padding: 4px 5px 4px 8px;
+
+            .button {
+                font-size: 10px;
+                padding: 8px 12px;
+            }
+
+            input {
+                &::placeholder {
+                    font-size: 10px;
+                }
             }
         }
     }

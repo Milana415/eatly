@@ -16,7 +16,7 @@
         }
 
         &::after {
-            content: url('../../images/mobile-app-vector.png');
+            content: url('../../images/vector-lines.svg');
             position: absolute;
             left: calc(304px + 15px);
         }
@@ -46,7 +46,7 @@
             position: relative;
 
             &::after {
-                content: url('../../images/mobile-app-vector2.png');
+                content: url('../../images/vector-mobile.svg');
                 position: absolute;
                 top: 50px;
                 left: 170px;
@@ -68,7 +68,13 @@
         &__text {
             &::after {
                 top: 80px;
-                rotate: 260deg;
+                rotate: 240deg;
+            }
+
+            button {
+                &::after {
+                    rotate: 240deg;
+                }
             }
         }
     }
@@ -79,6 +85,28 @@
         &__content {
             flex-direction: column-reverse;
             align-items: center;
+        }
+    }
+}
+
+@include media($sm) {
+    .mobile-app {
+        &__img {
+            img {
+                width: 180px;
+            }
+
+            &::after {
+                left: calc(180px + 8px);
+            }
+        }
+
+        button {
+            &::after {
+                top: 20px;
+                left: 10px;
+                @include size(100, 100);
+            }
         }
     }
 }
