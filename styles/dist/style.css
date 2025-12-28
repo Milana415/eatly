@@ -20,7 +20,7 @@ body {
 
 @media (width <= 1440px) {
   .container {
-    padding: 0 30px;
+    margin: 0 30px;
   }
 }
 .logo {
@@ -1060,6 +1060,14 @@ h3 {
     gap: 40px;
   }
 }
+@media (width <= 768px) {
+  .control__text .h2 {
+    font-family: Poppins;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 32px;
+  }
+}
 .reviews {
   padding: 116px 0 217px 0;
 }
@@ -1301,7 +1309,7 @@ h3 {
 .menu-main__content::after {
   content: url("../../images/vector-lines.svg");
   position: absolute;
-  left: 755px;
+  right: -60px;
   top: -32px;
 }
 .menu-main__slider {
@@ -1647,6 +1655,20 @@ h3 {
   text-align: center;
 }
 
+@media (width <= 1440px) {
+  .menu-main .container {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+  .menu-main__content {
+    max-width: 657px;
+  }
+}
+@media (width <= 1024px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+}
 .faq .container {
   padding: 196px 0 174px 0;
 }
@@ -1684,6 +1706,8 @@ h3 {
   align-items: center;
   justify-content: center;
   gap: px;
+  flex-shrink: 0;
+  transition: rotate 0.3s ease;
 }
 .faq .container .plus__line:first-child {
   width: 16px;
@@ -1720,7 +1744,68 @@ h3 {
   color: #676767;
   letter-spacing: 1%;
 }
+.faq__item[open] .plus {
+  rotate: 45deg;
+}
 
+@media (width <= 1440px) {
+  .faq__items {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+@media (width <= 768px) {
+  .faq .container h2 {
+    font-family: Poppins;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 38px;
+  }
+  .faq .container h3 {
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    color: #323142;
+  }
+  .faq__item {
+    padding: 24px 0 12px 0;
+  }
+  .faq__item-cont {
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #676767;
+    letter-spacing: 1%;
+  }
+}
+@media (width <= 576px) {
+  .faq .container h2 {
+    font-family: Poppins;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 32px;
+  }
+  .faq .container h3 {
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 18px;
+    color: #323142;
+  }
+  .faq__item {
+    padding: 18px 0 10px 0;
+  }
+  .faq__item-cont {
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    color: #676767;
+    letter-spacing: 1%;
+  }
+}
 .error {
   padding: 130px 0;
 }

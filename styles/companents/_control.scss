@@ -233,3 +233,13 @@
         }
     }
 }
+
+@include media($md) {
+    .control {
+        &__text {
+            .h2 {
+                @include font(Poppins, 36, 700, 32, null);
+            }
+        }
+    }
+}

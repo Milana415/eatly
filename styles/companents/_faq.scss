@@ -28,6 +28,8 @@
             border-radius: 100%;
             position: relative;
             @include flex(center, center, null, null);
+            flex-shrink: 0;
+            transition: rotate 0.3s ease;
 
             &__line {
                 &:first-child {
@@ -62,6 +64,67 @@
         &-cont {
             @include font (Poppins, 20, 400, 32, $gray-medium);
             letter-spacing: 1%;
+        }
+
+        &[open] {
+            .plus {
+                rotate: 45deg;
+            }
+        }
+    }
+}
+
+@include media($xl) {
+    .faq {
+        &__items {
+            width: 90%;
+            margin: 0 auto;
+        }
+    }
+}
+
+@include media($md) {
+    .faq {
+        .container {
+            h2 {
+                @include font (Poppins, 36, 600, 38, null);
+            }
+
+            h3 {
+                @include font (Poppins, 20, 600, 24, $black);
+            }
+        }
+
+        &__item {
+            padding: 24px 0 12px 0;
+
+            &-cont {
+                @include font (Poppins, 18, 400, 20, $gray-medium);
+                letter-spacing: 1%;
+            }
+        }
+    }
+}
+
+@include media($sm) {
+    .faq {
+        .container {
+            h2 {
+                @include font (Poppins, 30, 600, 32, null);
+            }
+
+            h3 {
+                @include font (Poppins, 16, 600, 18, $black);
+            }
+        }
+
+        &__item {
+            padding: 18px 0 10px 0;
+
+            &-cont {
+                @include font (Poppins, 14, 400, 16, $gray-medium);
+                letter-spacing: 1%;
+            }
         }
     }
 }
