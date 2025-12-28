@@ -8,15 +8,36 @@
         }
     }
 
+    &-slider {
+        padding-bottom: 100px;
+        overflow: hidden;
+    }
+
+    .swiper {
+        &-wrapper {
+            padding-bottom: 100px;
+        }
+
+        &-slide {
+            height: auto;
+            display: flex;
+        }
+    }
+
     &__card {
         background: $white;
         max-width: 528px;
         padding: 38px 43px;
         border-radius: 21px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease;
+        @include flex(null, center, column, null);
 
         &:hover {
             .reviews__user {
                 display: flex;
+                opacity: 1;
+                transform: translateY(0);
             }
         }
     }
@@ -27,13 +48,7 @@
         display: none;
         opacity: 0;
         transform: translateY(-10px);
-        transition: opacity 0.3s ease, transform 0.3s ease, display 0s;
-
-        .reviews__card:hover & {
-            display: flex;
-            opacity: 1;
-            transform: translateY(0);
-        }
+        transition: all 0.4s ease;
     }
 
     &__profile {
@@ -42,6 +57,7 @@
         img {
             @include size (71, 71);
             border-radius: 100%;
+            object-fit: cover;
         }
 
         &__info {
@@ -69,54 +85,26 @@
         }
     }
 
-    .flickity-page-dots {
-        bottom: -22px;
+    .swiper-scrollbar {
+        height: 11px;
+        background: $puple-light;
+        border-radius: 50px;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        max-width: 710px;
+        cursor: pointer;
 
-        .dot {
-            @include size (40, 4);
-            border-radius: 50%;
-            background: $puple-light;
-            transition: background 0.3s ease;
-
-            &.is-selected {
-                background: $puple-medium;
-                width: 40px;
-                border-radius: 6px;
-            }
-        }
-    }
-
-    .flickity-prev-next-button {
-        display: none;
-    }
-
-    /* width: 44px;
-        height: 44px;
-        background: $white;
-        border-radius: 50%;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        opacity: 0.8;
-        transition: opacity 0.2s;
-
-        &:hover {
-            opacity: 1;
+        &-drag {
             background: $puple-medium;
+            border-radius: 50px;
+            cursor: grab;
 
-            svg {
-                fill: white;
+            &:active {
+                cursor: grabbing;
             }
         }
-
-        &.previous {
-            left: -60px;
-        }
-
-        &.next {
-            right: -60px;
-        }
     }
-
-    .flickity-viewport {
-        padding: 0 60px;
-    }*/
 }

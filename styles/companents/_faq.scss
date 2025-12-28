@@ -7,6 +7,15 @@
             max-width: 408px;
             text-align: center;
             margin: 0 auto;
+            margin-bottom: 90px;
+            position: relative;
+
+            &::after {
+                content: url('../../images/vector-lines.svg');
+                position: absolute;
+                right: -60px;
+                top: -37px;
+            }
         }
 
         h3 {
@@ -17,16 +26,27 @@
             @include size (30, 30);
             background: $puple-medium;
             border-radius: 100%;
+            position: relative;
+            @include flex(center, center, null, null);
 
-            &::after {
-                @include size (1, 10.6);
-                background: $white;
+            &__line {
+                &:first-child {
+                    @include size(16, 2);
+                    background: $white;
+                    position: absolute;
+                    border-radius: 2px;
+                }
+
+                &:last-child {
+                    @include size(2, 16);
+                    background: $white;
+                    position: absolute;
+                    border-radius: 2px;
+                }
             }
 
-            &::before {
-                @include size (1, 10.6);
-                background: $white;
-                rotate: 90deg;
+            &:hover {
+                cursor: pointer;
             }
         }
     }

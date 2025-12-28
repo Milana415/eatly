@@ -7,6 +7,7 @@
     <title>Menu</title>
     <link rel="stylesheet" href="styles/dist/style.css">
     <link rel="shortcut icon" href="images/Logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@9/swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -31,6 +32,14 @@
                         <button class="button button--primary">Sign Up</button>
                     </div>
                 </div>
+
+                <div class="header__burger" id="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <div class="header__overlay" id="overlay"></div>
             </div>
         </div>
     </header>
@@ -38,15 +47,51 @@
     <main class="menu-main">
         <div class="container">
             <div class="menu-main__content">
-                <div class="menu-main__banner">
-                    <div class="menu-main__banner-text">
-                        <h1>50% OFF<br><span>WEEKENDS</span></h1>
+                <div class="menu-main__slider">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+
+                            <div class="swiper-slide">
+                                <div class="menu-main__banner">
+                                    <div class="menu-main__banner-text">
+                                        <h1>50% OFF</h1>
+                                        <span>WEEKENDS</span>
+                                    </div>
+                                    <img src="images/menu-dish.png" alt="menu-dish">
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="menu-main__banner menu-main__banner--green">
+                                    <div class="menu-main__banner-text">
+                                        <h1>100%</h1>
+                                        <span>ORGANIC</span>
+                                    </div>
+                                    <img src="images/menu_banner2.png" alt="menu-dish">
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="menu-main__banner menu-main__banner--orange">
+                                    <div class="menu-main__banner-text">
+                                        <h1>COMBO</h1>
+                                        <span>DISHES</span>
+                                    </div>
+                                    <img src="images/menu_banner3.png" alt="menu-dish">
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="swiper-pagination"></div>
                     </div>
-                    <img src="images/menu-dish.png" alt="menu-dish">
                 </div>
+
                 <div class="menu-main__search">
-                    <img src="images/Search.svg" alt="search">
-                    <input type="search" class="" placeholder="Search" required>
+                    <div class="menu-main__search-input">
+                        <img src="images/Search.svg" alt="search">
+                        <input type="search" class="" placeholder="Search" required>
+                    </div>
 
                     <div class="menu-main__search-buttons">
                         <button class="button button--secondary">Food</button>
@@ -173,16 +218,16 @@
             <div class="dishes__title">
                 <h3>Our Top <span class="span">Dishes</span></h3>
                 <a class="card__viewAll" href="404.html">View All
-                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
-                    width="21" height="21" x="0" y="0" viewBox="0 0 24 24" style="enable-background:new 0 0 15.8 15.8"
-                    xml:space="preserve" class="">
-                    <g>
-                        <path fill="#ACADB9"
-                            d="M13 4a1 1 0 1 0-2 0v13.586l-5.293-5.293a1 1 0 0 0-1.414 1.414l7 7a1 1 0 0 0 1.414 0l7-7a1 1 0 0 0-1.414-1.414L13 17.586z"
-                            opacity="1" data-original="#ACADB9" class=""></path>
-                    </g>
-                </svg>
-            </a>
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        width="21" height="21" x="0" y="0" viewBox="0 0 24 24"
+                        style="enable-background:new 0 0 15.8 15.8" xml:space="preserve" class="">
+                        <g>
+                            <path fill="#ACADB9"
+                                d="M13 4a1 1 0 1 0-2 0v13.586l-5.293-5.293a1 1 0 0 0-1.414 1.414l7 7a1 1 0 0 0 1.414 0l7-7a1 1 0 0 0-1.414-1.414L13 17.586z"
+                                opacity="1" data-original="#ACADB9" class=""></path>
+                        </g>
+                    </svg>
+                </a>
             </div>
             <div class="dishes__content">
                 <div class="dishes__items cards">
@@ -293,7 +338,10 @@
                 <details class="faq__item">
                     <summary class="faq__item-title">
                         <h3>How long does delivery take?</h3>
-                        <div class="plus"></div>
+                        <div class="plus">
+                            <div class="plus__line"></div>
+                            <div class="plus__line"></div>
+                        </div>
                     </summary>
                     <div class="faq__item-cont">
                         You Can Get Information By Contacting Our Support Team Have 24/7 Service. <br> What’s The
@@ -303,7 +351,10 @@
                 <details class="faq__item">
                     <summary class="faq__item-title">
                         <h3>How Does It Work?</h3>
-                        <div class="plus"></div>
+                        <div class="plus">
+                            <div class="plus__line"></div>
+                            <div class="plus__line"></div>
+                        </div>
                     </summary>
                     <div class="faq__item-cont">
                         You Can Get Information By Contacting Our Support Team Have 24/7 Service. <br> What’s The
@@ -313,7 +364,10 @@
                 <details class="faq__item">
                     <summary class="faq__item-title">
                         <h3>How does your food delivery service work?</h3>
-                        <div class="plus"></div>
+                        <div class="plus">
+                            <div class="plus__line"></div>
+                            <div class="plus__line"></div>
+                        </div>
                     </summary>
                     <div class="faq__item-cont">
                         You Can Get Information By Contacting Our Support Team Have 24/7 Service. <br> What’s The
@@ -323,7 +377,10 @@
                 <details class="faq__item">
                     <summary class="faq__item-title">
                         <h3>What payment options do you accept?</h3>
-                        <div class="plus"></div>
+                        <div class="plus">
+                            <div class="plus__line"></div>
+                            <div class="plus__line"></div>
+                        </div>
                     </summary>
                     <div class="faq__item-cont">
                         You Can Get Information By Contacting Our Support Team Have 24/7 Service. <br> What’s The
@@ -333,7 +390,10 @@
                 <details class="faq__item">
                     <summary class="faq__item-title">
                         <h3>Do you offer discounts or promotions?</h3>
-                        <div class="plus"></div>
+                        <div class="plus">
+                            <div class="plus__line"></div>
+                            <div class="plus__line"></div>
+                        </div>
                     </summary>
                     <div class="faq__item-cont">
                         You Can Get Information By Contacting Our Support Team Have 24/7 Service. <br> What’s The
@@ -347,10 +407,10 @@
     <footer class="footer">
         <div class="container">
             <div class="footer__nav">
-                <div class="logo">
+                <a class="logo" href="index.html">
                     <img src="images/Logo.png" alt="Logo">
                     <p>eatly</p>
-                </div>
+                </a>
                 <ul class="footer__menu">
                     <li><a href="404.html">Blog</a></li>
                     <li><a href="404.html">Pricing</a></li>
@@ -370,7 +430,10 @@
         </div>
     </footer>
 
+    <script src="scripts/burgerMenu.js"></script>
     <script src="scripts/sliderProgress.js"></script>
+    <script src="https://unpkg.com/swiper@9/swiper-bundle.min.js"></script>
+    <script src="scripts/menuSlider_swiper.js"></script>
 </body>
 
 </html>

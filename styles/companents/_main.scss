@@ -83,20 +83,46 @@
 
     &__banner {
         margin-right: 80px;
+        position: relative;
 
         &-img {
             @include size (424, 424);
             position: relative;
+        }
 
-            &::after {
-                content: url('../../images/mobile-app-vector.png');
+        &-card {
+            img {
                 position: absolute;
-                left: calc(304px + 15px);
+                top: 25px;
+                left: 173px;
+                @include size(329, 89);
+                border-radius: 16.41px;
+                box-shadow: -9.84px 12.3px 20.51px 0px rgba(0, 0, 0, 0.15);
             }
 
             &::before {
-                content: url('../../images/main-grafic.svg');
+                content: url('../../images/main-card-vector.svg');
                 position: absolute;
+                top: 7px;
+                right: -130px;
+            }
+        }
+
+        &-grafic {
+            img {
+                position: absolute;
+                top: 265px;
+                right: 316px;
+                @include size(207, 205);
+                border-radius: 16.76px;
+                box-shadow: 14.12px 18.83px 37.65px 0px rgba(26, 32, 44, 0.15);
+            }
+
+            &::before {
+                content: url('../../images/main-grafic-vector.svg');
+                position: absolute;
+                bottom: -85px;
+                left: -136px;
             }
         }
     }

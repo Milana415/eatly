@@ -7,7 +7,7 @@
     <title>Eatly</title>
     <link rel="stylesheet" href="styles/dist/style.css">
     <link rel="shortcut icon" href="images/Logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@9/swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -80,6 +80,12 @@
             </div>
             <div class="main__banner">
                 <img src="images/main-img.png" class="main__banner-img" alt="Banner">
+                <div class="main__banner-grafic">
+                    <img src="images/main-grafic.png" alt="Banner-graph">
+                </div>
+                <div class="main__banner-card">
+                    <img src="images/main-card.png" alt="Banner-card">
+                </div>
             </div>
         </div>
     </main>
@@ -406,61 +412,100 @@
         <div class="container">
             <div class="reviews__content">
                 <h3><span class="span">Customer</span> Say</h3>
-                <div class="carousel" data-flickity='{ "wrapAround": false, "pageDots": false, "prevNextButtons": true, "autoPlay": false,
-                    "contain": true, "cellAlign": "center", "resize": true, "watchCSS": false}'>
-                    <div class="reviews__card carousel-cell">
-                        <div class="reviews__user">
-                            <div class="reviews__profile">
-                                <img src="images/alexander_r.png" alt="Alexander R.">
-                                <div class="reviews__profile-info">
-                                    <h4>Alexander R.</h4>
-                                    <p>01 Year with Us</p>
+
+                <div class="swiper reviews-slider">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+                            <div class="reviews__card">
+                                <div class="reviews__user">
+                                    <div class="reviews__profile">
+                                        <img src="images/alexander_r.png" alt="User">
+                                        <div class="reviews__profile-info">
+                                            <h4>Alexander R.</h4>
+                                            <p>01 Year With Us</p>
+                                        </div>
+                                    </div>
+                                    <div class="reviews__quote-icon">
+                                        <img src="images/marks.svg" alt="Quote">
+                                    </div>
+                                </div>
+
+                                <blockquote class="reviews__quote">
+                                    Online invoice payment helps companies save time, are faster and save maximum effort
+                                    for the clients and save maximum effort. Online invoice payment helps companies save
+                                    time
+                                </blockquote>
+                                <div class="reviews__stars">
+                                    <img src="images/star.svg" alt="Star">
+                                    <img src="images/star.svg" alt="Star">
+                                    <img src="images/star.svg" alt="Star">
+                                    <img src="images/star.svg" alt="Star">
+                                    <img src="images/star.svg" alt="Star">
                                 </div>
                             </div>
-                            <img src="images/marks.svg" alt="marks">
                         </div>
-                        <blockquote class="reviews__quote">
-                            Online invoice payment helps companies save time, are faster and save maximum effort
-                            for the clients and save maximum effort. Online invoice payment helps companies save time
-                        </blockquote>
-                        <div class="reviews__stars">
-                            <img src="images/star.svg" alt="Star">
-                            <img src="images/star.svg" alt="Star">
-                            <img src="images/star.svg" alt="Star">
-                            <img src="images/star.svg" alt="Star">
-                            <img src="images/star.svg" alt="Star">
-                        </div>
-                    </div>
 
-                    <div class="reviews__card carousel-cell">
-                        <blockquote class="reviews__quote">
-                            Online invoice payment helps companies save time, are faster and save maximum
-                            effort for the clients and save maximum effort. Online invoice payment helps
-                            companies save time
-                        </blockquote>
-                        <div class="reviews__stars">
-                            <img src="images/star.svg" alt="Star">
-                            <img src="images/star.svg" alt="Star">
-                            <img src="images/star.svg" alt="Star">
-                            <img src="images/star.svg" alt="Star">
-                            <img src="images/star.svg" alt="Star">
-                        </div>
-                    </div>
+                        <div class="swiper-slide">
+                            <div class="reviews__card">
+                                <div class="reviews__user">
+                                    <div class="reviews__profile">
+                                        <img src="images/alexander_r.png" alt="User">
+                                        <div class="reviews__profile-info">
+                                            <h4>Lisa M.</h4>
+                                            <p>02 Years With Us</p>
+                                        </div>
+                                    </div>
+                                    <div class="reviews__quote-icon">
+                                        <img src="images/marks.svg" alt="Quote">
+                                    </div>
+                                </div>
 
-                    <div class="reviews__card carousel-cell">
-                        <blockquote class="reviews__quote">
-                            Online invoice payment helps companies save time, are faster and save
-                            maximum effort for the clients and save maximum effort. Online invoice payment helps
-                            companies save time
-                        </blockquote>
-                        <div class="reviews__stars">
-                            <img src="images/star.svg" alt="Star">
-                            <img src="images/star.svg" alt="Star">
-                            <img src="images/star.svg" alt="Star">
-                            <img src="images/star.svg" alt="Star">
-                            <img src="images/star.svg" alt="Star">
+                                <blockquote class="reviews__quote">
+                                    Online invoice payment helps companies save time, are faster and save maximum
+                                    effort for the clients and save maximum effort.
+                                </blockquote>
+                                <div class="reviews__stars">
+                                    <img src="images/star.svg" alt="Star">
+                                    <img src="images/star.svg" alt="Star">
+                                    <img src="images/star.svg" alt="Star">
+                                    <img src="images/star.svg" alt="Star">
+                                    <img src="images/star.svg" alt="Star">
+                                </div>
+                            </div>
                         </div>
+
+                        <div class="swiper-slide">
+                            <div class="reviews__card">
+                                <div class="reviews__user">
+                                    <div class="reviews__profile">
+                                        <img src="images/alexander_r.png" alt="User">
+                                        <div class="reviews__profile-info">
+                                            <h4>John D.</h4>
+                                            <p>05 Months With Us</p>
+                                        </div>
+                                    </div>
+                                    <div class="reviews__quote-icon">
+                                        <img src="images/marks.svg" alt="Quote">
+                                    </div>
+                                </div>
+
+                                <blockquote class="reviews__quote">
+                                    Online invoice payment helps companies save time, are faster and save
+                                    maximum effort for the clients.
+                                </blockquote>
+                                <div class="reviews__stars">
+                                    <img src="images/star.svg" alt="Star">
+                                    <img src="images/star.svg" alt="Star">
+                                    <img src="images/star.svg" alt="Star">
+                                    <img src="images/star.svg" alt="Star">
+                                    <img src="images/star.svg" alt="Star">
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
+                    <div class="swiper-scrollbar"></div>
                 </div>
             </div>
         </div>
@@ -482,16 +527,16 @@
     <footer class="footer">
         <div class="container">
             <div class="footer__nav">
-                <div class="logo">
+                <a class="logo" href="index.html">
                     <img src="images/Logo.png" alt="Logo">
                     <p>eatly</p>
-                </div>
-                <ul class="footer__menu">
-                    <li><a href="404.html">Blog</a></li>
-                    <li><a href="404.html">Pricing</a></li>
-                    <li><a href="404.html">About Us</a></li>
-                    <li><a href="404.html">Contact</a></li>
-                </ul>
+                    </a>
+                    <ul class="footer__menu">
+                        <li><a href="404.html">Blog</a></li>
+                        <li><a href="404.html">Pricing</a></li>
+                        <li><a href="404.html">About Us</a></li>
+                        <li><a href="404.html">Contact</a></li>
+                    </ul>
             </div>
             <div class="footer__info">
                 <p>© 2023 EATLY All Rights Reserved.</p>
@@ -505,12 +550,11 @@
         </div>
     </footer>
 
-
+    <script src="https://unpkg.com/swiper@9/swiper-bundle.min.js"></script>
     <script src="scripts/dist/sliderProgress.dev.js"></script>
     <script src="scripts/reviewsSlider.js"></script>
     <script src="scripts/burgerMenu.js"></script>
-    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-    <script src="scripts/reviewFlicky.js"></script>
+    <script src="scripts/review_swiper.js"></script>
 </body>
 
 </html>
