@@ -1,5 +1,5 @@
 .menu-main {
-    .container {
+    &__container {
         padding: 114px 0 130px 0;
         display: grid;
         grid-template-columns: 1fr 377px;
@@ -388,7 +388,7 @@
         }
 
         &__content {
-            max-width: 657px;
+            max-width: 80%;
         }
     }
 }
@@ -396,5 +396,39 @@
 @include media($lg) {
     .container {
         grid-template-columns: 1fr;
+    }
+}
+
+@media (width<=1200px) {
+    .menu-main {
+        &__container {
+            padding-bottom: 0;
+            grid-template-columns: 1fr;
+            gap: 80px;
+            justify-items: center;
+        }
+
+        &__form-categories {
+            gap: 12px;
+        }
+
+        &__banner img {
+            @include size(200, 200);
+        }
+    }
+}
+
+@include media($md) {
+    .menu-main {
+        &__content {
+            display: none;
+            max-width: 80%;
+            right: 6px;
+            top: 90px;
+        }
+        &__form-sort {
+            grid-template-columns: 1fr;
+            gap: 6px;
+        }
     }
 }

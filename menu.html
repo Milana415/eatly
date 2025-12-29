@@ -46,101 +46,103 @@
 
     <main class="menu-main">
         <div class="container">
-            <div class="menu-main__content">
-                <div class="menu-main__slider">
-                    <div class="swiper">
-                        <div class="swiper-wrapper">
+            <div class="menu-main__container">
+                <div class="menu-main__content">
+                    <div class="menu-main__slider">
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
 
-                            <div class="swiper-slide">
-                                <div class="menu-main__banner">
-                                    <div class="menu-main__banner-text">
-                                        <h1>50% OFF</h1>
-                                        <span>WEEKENDS</span>
+                                <div class="swiper-slide">
+                                    <div class="menu-main__banner">
+                                        <div class="menu-main__banner-text">
+                                            <h1>50% OFF</h1>
+                                            <span>WEEKENDS</span>
+                                        </div>
+                                        <img src="images/menu-dish.png" alt="menu-dish">
                                     </div>
-                                    <img src="images/menu-dish.png" alt="menu-dish">
                                 </div>
+
+                                <div class="swiper-slide">
+                                    <div class="menu-main__banner menu-main__banner--green">
+                                        <div class="menu-main__banner-text">
+                                            <h1>100%</h1>
+                                            <span>ORGANIC</span>
+                                        </div>
+                                        <img src="images/menu_banner2.png" alt="menu-dish">
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="menu-main__banner menu-main__banner--orange">
+                                        <div class="menu-main__banner-text">
+                                            <h1>COMBO</h1>
+                                            <span>DISHES</span>
+                                        </div>
+                                        <img src="images/menu_banner3.png" alt="menu-dish">
+                                    </div>
+                                </div>
+
                             </div>
 
-                            <div class="swiper-slide">
-                                <div class="menu-main__banner menu-main__banner--green">
-                                    <div class="menu-main__banner-text">
-                                        <h1>100%</h1>
-                                        <span>ORGANIC</span>
-                                    </div>
-                                    <img src="images/menu_banner2.png" alt="menu-dish">
-                                </div>
-                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
 
-                            <div class="swiper-slide">
-                                <div class="menu-main__banner menu-main__banner--orange">
-                                    <div class="menu-main__banner-text">
-                                        <h1>COMBO</h1>
-                                        <span>DISHES</span>
-                                    </div>
-                                    <img src="images/menu_banner3.png" alt="menu-dish">
-                                </div>
-                            </div>
-
+                    <div class="menu-main__search">
+                        <div class="menu-main__search-input">
+                            <img src="images/Search.svg" alt="search">
+                            <input type="search" class="" placeholder="Search" required>
                         </div>
 
-                        <div class="swiper-pagination"></div>
+                        <div class="menu-main__search-buttons">
+                            <button class="button button--secondary">Food</button>
+                            <button class="button button--primary">Resturent</button>
+                        </div>
                     </div>
                 </div>
-
-                <div class="menu-main__search">
-                    <div class="menu-main__search-input">
-                        <img src="images/Search.svg" alt="search">
-                        <input type="search" class="" placeholder="Search" required>
+                <div class="menu-main__form">
+                    <h2>Category</h2>
+                    <div class="menu-main__form-categories">
+                        <div class="menu-main__form-category">
+                            <img src="images/Pizza.svg" alt="Pizza">
+                            <p>Pizza</p>
+                        </div>
+                        <div class="menu-main__form-category">
+                            <img src="images/Hotdog.svg" alt="Asian">
+                            <p>Asian</p>
+                        </div>
+                        <div class="menu-main__form-category">
+                            <img src="images/Doughnut.svg" alt="Donat">
+                            <p>Donat</p>
+                        </div>
+                        <div class="menu-main__form-category">
+                            <img src="images/Icecream.svg" alt="Ise">
+                            <p>Ise</p>
+                        </div>
                     </div>
 
-                    <div class="menu-main__search-buttons">
-                        <button class="button button--secondary">Food</button>
-                        <button class="button button--primary">Resturent</button>
+                    <h2>Sort By</h2>
+                    <div class="menu-main__form-sort">
+                        <button class="menu-main__sort-btn">Recomended</button>
+                        <button class="menu-main__sort-btn">Most Popular</button>
+                        <button class="menu-main__sort-btn menu-main__sort-btn--active">Fast Delivery</button>
                     </div>
+
+                    <h2>Price</h2>
+                    <div class="menu-main__form-input">
+                        <input type="range" min="0" max="100" value="20">
+                        <div class="menu-main__form-progress">
+                            <p>$0</p>
+                            <p>$25</p>
+                            <p>$50</p>
+                            <p>$100</p>
+                            <p>$500</p>
+                            <p>$1000</p>
+                        </div>
+                    </div>
+
+                    <button class="menu-main__button button button--primary">Apply</button>
                 </div>
-            </div>
-            <div class="menu-main__form">
-                <h2>Category</h2>
-                <div class="menu-main__form-categories">
-                    <div class="menu-main__form-category">
-                        <img src="images/Pizza.svg" alt="Pizza">
-                        <p>Pizza</p>
-                    </div>
-                    <div class="menu-main__form-category">
-                        <img src="images/Hotdog.svg" alt="Asian">
-                        <p>Asian</p>
-                    </div>
-                    <div class="menu-main__form-category">
-                        <img src="images/Doughnut.svg" alt="Donat">
-                        <p>Donat</p>
-                    </div>
-                    <div class="menu-main__form-category">
-                        <img src="images/Icecream.svg" alt="Ise">
-                        <p>Ise</p>
-                    </div>
-                </div>
-
-                <h2>Sort By</h2>
-                <div class="menu-main__form-sort">
-                    <button class="menu-main__sort-btn">Recomended</button>
-                    <button class="menu-main__sort-btn">Most Popular</button>
-                    <button class="menu-main__sort-btn menu-main__sort-btn--active">Fast Delivery</button>
-                </div>
-
-                <h2>Price</h2>
-                <div class="menu-main__form-input">
-                    <input type="range" min="0" max="100" value="20">
-                    <div class="menu-main__form-progress">
-                        <p>$0</p>
-                        <p>$25</p>
-                        <p>$50</p>
-                        <p>$100</p>
-                        <p>$500</p>
-                        <p>$1000</p>
-                    </div>
-                </div>
-
-                <button class="menu-main__button button button--primary">Apply</button>
             </div>
         </div>
     </main>

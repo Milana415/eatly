@@ -49,5 +49,35 @@
         .container {
             padding: 100px 60px 120px 60px;
         }
+
+         &__content {
+            h3 {
+                line-height: 40px;
+                font-size: 42px;
+                margin-bottom: 48px;
+            }
+        }
+        
+        &__title {
+            flex-direction: column;
+            gap: 6px;
+            margin: 0 auto;
+        }
+    }
+}
+
+@include media($xs) {
+    .dishes {
+        .container {
+            padding: 80px 0;
+        }
+
+        &__content {
+            h3 {
+                line-height: 32px;
+                font-size: 36px;
+                margin-bottom: 28px;
+            }
+        }
     }
 }

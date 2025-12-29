@@ -224,13 +224,28 @@
     }
 }
 
-
-@media (max-width: 768px) {
+@include media($lg) {
     .control {
         &__content {
             grid-template-columns: 1fr;
             gap: 40px;
         }
+
+        &__text {
+            .h2 {
+                @include font(Poppins, 36, 700, 32, null);
+            }
+        }
+
+        &__item {
+            width: 305px;
+        }
+
+        button,
+        h4 {
+            font-size: 16px;
+        }
+
     }
 }
 
@@ -239,6 +254,48 @@
         &__text {
             .h2 {
                 @include font(Poppins, 36, 700, 32, null);
+            }
+        }
+
+        &__form {
+            &-item-header {
+                flex-wrap: wrap;
+            }
+        }
+    }
+}
+
+@include media($sm) {
+    .control {
+        &__item {
+            width: 85%;
+            flex-direction: column;
+            gap: 12px;
+            padding: 8px 17px;
+            align-items: flex-start;
+
+            img {
+                @include size(60, 60);
+            }
+        }
+
+        &__form {
+            background: none;
+            border: 0;
+            padding: 0;
+
+            &-icon {
+                display: none;
+            }
+
+            &-header {
+                flex-direction: column;
+                gap: 12px;
+
+            }
+
+            &-cost {
+                font-size: 16px;
             }
         }
     }

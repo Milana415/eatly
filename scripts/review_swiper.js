@@ -1,18 +1,16 @@
 const reviewsSwiper = new Swiper('.reviews-slider', {
-    slidesPerView: 2,
-    spaceBetween: 20,
-    loop: true,
-    
+    slidesPerView: 'auto',
+    spaceBetween: 26,
+    loop: false,
+
     scrollbar: {
         el: '.swiper-scrollbar',
         draggable: true,
-        hide: false,
+        dragSize: 203,
+        height: 11,
     },
-    
-    breakpoints: {
-        768: {
-            slidesPerView: 2,
-            spaceBetween: 30,
-        }
-    }
+
+    mousewheel: true,
+    observer: true,
+    observeParents: true,
 });

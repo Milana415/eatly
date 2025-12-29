@@ -155,6 +155,14 @@
             justify-content: center;
         }
 
+        &__title {
+            font-size: 42px;
+        }
+
+        &__banner-img {
+            @include size (280, 280);
+        }
+
         &__content {
             padding-bottom: 48px;
         }

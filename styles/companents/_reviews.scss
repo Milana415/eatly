@@ -10,7 +10,7 @@
 
     &-slider {
         padding-bottom: 100px;
-        overflow: hidden;
+        overflow: visible;
     }
 
     .swiper {
@@ -18,66 +18,27 @@
             padding-bottom: 100px;
         }
 
+
         &-slide {
             height: auto;
             display: flex;
-        }
-    }
+            background: $white;
+            max-width: 528px;
+            padding: 38px 43px;
+            border-radius: 21px;
+            @include flex(null, center, column, null);
 
-    &__card {
-        background: $white;
-        max-width: 528px;
-        padding: 38px 43px;
-        border-radius: 21px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-        transition: transform 0.3s ease;
-        @include flex(null, center, column, null);
-
-        &:hover {
-            .reviews__user {
-                display: flex;
-                opacity: 1;
-                transform: translateY(0);
+            &:hover {
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
             }
         }
     }
-
-    &__user {
-        @include flex(center, space-between, null, null);
-        margin-bottom: 32px;
-        display: none;
-        opacity: 0;
-        transform: translateY(-10px);
-        transition: all 0.4s ease;
-    }
-
-    &__profile {
-        @include flex (center, null, null, 21);
-
-        img {
-            @include size (71, 71);
-            border-radius: 100%;
-            object-fit: cover;
-        }
-
-        &__info {
-            h4 {
-                @include font (Poppins, 21, 500, 31, rgba(3, 3, 20, 1));
-                margin-bottom: 0.4px;
-            }
-
-            p {
-                @include font (Quicksand, 17, 500, 26, rgba(94, 93, 93, 1));
-            }
-        }
-    }
-
 
     &__quote {
         @include font (Poppins, 18, 400, 26, $gray-medium);
         font-style: italic;
         margin-bottom: 39px;
-        max-width: 528px;
+        max-width: 100%;
 
         &::before,
         &::after {
@@ -86,18 +47,19 @@
     }
 
     .swiper-scrollbar {
-        height: 11px;
+        height: 11px !important;
+        width: 100%;
+        max-width: 710px;
         background: $puple-light;
         border-radius: 50px;
         position: absolute;
         bottom: 0;
-        left: 50%;
+        left: 50% !important;
         transform: translateX(-50%);
-        width: 100%;
-        max-width: 710px;
         cursor: pointer;
 
         &-drag {
+            height: 100% !important;
             background: $puple-medium;
             border-radius: 50px;
             cursor: grab;
@@ -105,6 +67,43 @@
             &:active {
                 cursor: grabbing;
             }
+        }
+    }
+}
+
+@include media($md) {
+    .reviews {
+        .swiper-slide {
+            max-width: 260px;
+        }
+
+        &__quote {
+            font-size: 16px;
+        }
+
+        .swiper-slider {
+            padding-bottom: 60px;
+        }
+    }
+}
+
+@include media($sm) {
+    .reviews {
+        .swiper-slide {
+            width: 80%;
+            padding: 28px 23px;
+        }
+
+        &__quote {
+            font-size: 14px;
+        }
+    }
+
+    .swiper-scrollbar {
+        height: 8px !important;
+
+        &-drag {
+            width: 50% !important;
         }
     }
 }
